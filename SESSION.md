@@ -33,7 +33,8 @@ des achats — sans confondre un lien vivant avec un lien périmé.
   **soft-404** / **challenge** / archive) ; `--check --render` (validation de pages JS,
   ex. liens produit AliExpress) ; `--from-file` ; cache opt-in.
 - **Cas de test = AliExpress** : prototype jetable `.sandbox/ali_search.py` (parse le JSON
-  produits embarqué, ~60 résultats/requête). Candidat mini-pc trouvé : Firebat A8 (AI 9 365).
+  produits embarqué, filtres CPU/RAM) → **8 candidats mini-pc, liens validés** via
+  `--check --render`. Résultat côté sujet mini-pc : `~/dev/mini-pc/docs/aliexpress-shortlist-2026-09-27.md`.
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
@@ -54,7 +55,7 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
 ## TODO
-- [ ] **Recherche mini-pc filtrée** via le prototype (CPU/RAM, exclusion accessoires).
+- [x] **Recherche mini-pc** via le prototype (filtres CPU/RAM) → 8 candidats, liens validés (2026-09-27).
 - [ ] **Décider** : formaliser l'adaptateur AliExpress dans `webfetch` ou garder en script séparé.
 - [ ] **Décider T3** : FlareSolverr via podman rootless (seulement si T2 insuffisant).
 - [ ] Si T2 devient courant : intégrer `playwright` aux deps + `browsers_path` en config.
