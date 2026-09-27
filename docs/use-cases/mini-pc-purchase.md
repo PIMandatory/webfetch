@@ -83,16 +83,16 @@ Critères revus : on garde **8C/16T, 32 Go, silencieux** ; on **abandonne le NPU
 
 Critères : **8C/16T · 32 Go · silencieux · ≤ 700 € · revendeur FR/EU (pas de douane)** · NPU assoupli.
 
-| Modèle | CPU | Config | Bruit (mesuré) | Prix | Source (sans douane) | Critères |
-|---|---|---|---|---|---|---|
-| **Ninkear M8** | Ryzen 7 **8745HS** (8C/16T) | **32 Go + 1 To** | **~37–38 dB max** | **599 €** | **Darty (FR)** | ✅✅✅✅ |
-| Geekom A6 | Ryzen 7 **6800H** (8C/16T, Zen3+) | 32 Go (max 64) | à confirmer | 599–649 € | `geekom.fr` (EU) | ✅✅❓✅ |
-| GMKtec K8 Plus | Ryzen 7 8845HS (8C/16T) | 32 Go + 1 To | silencieux (reviews) | ~690 € (deal) / **810 €** (officiel) | AliExpress GMKtec (EU) / LDLC 799,95 € | ✅✅✅⚠️ prix |
+| Modèle | CPU | Config | Bruit (mesuré) | Prix | Lien |
+|---|---|---|---|---|---|
+| **Ninkear M8** | Ryzen 7 **8745HS** (8C/16T) | **32 Go + 1 To** | **~37–38 dB max** | **599 €** | https://www.darty.com/nav/achat/ref/MC354196272.html · https://ninkear.com/fr/products/ninkear-m8 |
+| Geekom A6 | Ryzen 7 **6800H** (8C/16T, Zen3+) | 32 Go (max 64) | à confirmer | 599–649 € | https://www.geekom.fr/geekom-a6-mini-pc/ · https://www.amazon.fr/GEEKOM-A6-Ordinateur-Affichage-Quadruple/dp/B0DRP2CPR1 |
+| GMKtec K8 Plus | Ryzen 7 8845HS (8C/16T) | 32 Go + 1 To | silencieux (reviews) | ~690 € (deal) / **810 €** (officiel) | https://www.ldlc.com/fiche/PB00706845.html · https://gmktec.fr/products/gmktec-nucbox-k8-plus-amd-ryzen-7-8845hs |
 
 ### Écartés (défaut vs critères)
-- **BMAX B8 A Power** (8845HS, 32 Go) — 494,99 € Geekbuying mais **« fan quite loud under heavy load »** → **échoue au critère silence**.
-- **Beelink SER8** (32 Go) — silencieux (~34,6 dB) mais **~1 050 € (Fnac)** → **hors budget**.
-- **Minisforum AI X1** — 699 € mais **expédié hors UE** → douane (écarté).
+- **BMAX B8 A Power** (8845HS, 32 Go) — 494,99 € mais **« fan quite loud under heavy load »** → **échoue au silence** : https://fr.geekbuying.com/item/BMAX-B8-A-Power-AI-Mini-PC-AMD-Ryzen-7-Pro-8845HS-32-Go-1-To-10003838.html
+- **Beelink SER8** (32 Go) — silencieux (~34,6 dB) mais **~1 050 €** → **hors budget** : https://www.idealo.fr/prix/205489945/beelink-ser8.html
+- **Minisforum AI X1** — 699 € mais **expédié hors UE** → douane : https://minisforumpc.fr/products/minisforum-ai-x1
 
 ### Réserves de vérification
 - **Darty bloque l'automatisation (403)** : le **599 €** du Ninkear M8 est issu d'un comparateur/snippet, **à revérifier sur la page** ; idem `Amazon.fr` (captcha) → prix SER8/K8 Plus partiellement non vérifiés en direct.
