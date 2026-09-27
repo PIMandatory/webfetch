@@ -47,12 +47,30 @@ Mini PC **8C/16T, 32 Go**, charge CPU/mémoire — **frais, silencieux, NPU ≥ 
 | GMKtec EVO-X1 | 27,8–30,4 dB | **44,6–46,1 dB** | ❌ bruyant | https://www.notebookcheck.biz/Test-du-GMKtec-EVO-X1-nouveau-design-compact-avec-Oculink-et-Ryzen-AI-9.964782.0.html |
 | ASUS PN54 | 25 dB | **42,6–47,1 dB** | ❌ bruyant en charge | https://www.notebookcheck.net/Asus-ExpertCenter-PN54-Business-mini-PC-with-AMD-Ryzen-AI-7-and-modern-features-in-the-review.1096722.0.html |
 
+## Budget ≤ 700 € (NPU assoupli) — 8C/16T + 32 Go + silencieux
+
+Critères revus : on garde **8C/16T, 32 Go, silencieux** ; on **abandonne le NPU fort**
+(Hawk Point / Zen 4, NPU ~16 TOPS).
+
+| Modèle | CPU | Config | Prix | Lien |
+|---|---|---|---|---|
+| **Minisforum AI X1** | **Ryzen 7 260** (8C/16T, Hawk Point, NPU ~16 TOPS) | **32 Go + 1 To** | **699 €** | https://minisforumpc.fr/products/minisforum-ai-x1 |
+| GMKtec K8 Plus | Ryzen 7 8845HS (8C/16T) | 32 Go + 1 To | 729,99 € (officiel) ; moins cher sur AliExpress | https://gmktec.fr/products/gmktec-nucbox-k8-plus-amd-ryzen-7-8845hs |
+| Beelink SER8 | Ryzen 7 8845HS (8C/16T) | 32 Go + 1 To | ~899 € (**hors budget**) | https://www.idealo.fr/prix/205489945/beelink-ser8.html |
+
+- **Bruit** : AI X1 → chambre à vapeur « grand ventilateur silencieux » ; SER8 mesuré
+  **~34,6 dB(A)** en charge ; K8 Plus refroidissement revu « bruit réduit ».
+- **Ryzen 7 260 = Hawk Point (Zen 4)**, 8C/16T, quasi identique au 8845HS → **NPU faible**
+  (conforme au compromis). Radeon 780M.
+- ⚠️ `idealo` : 669 € = config **inférieure** ; la **32 Go/1 To est à ~899 €**.
+
 ## Conclusion
 
-- **8C/16T + 32 Go + silencieux** : **Beelink SER9 MAX (AI 7 350, 1 029 €)** — meilleur profil.
-- **Plus de cœurs, silencieux en mode BIOS** : Minisforum AI X1 Pro (mode Silence 36 dB, 1 249 €).
-- **À éviter (bruit)** : GMKtec EVO-X1 et ASUS PN54 (~42–47 dB en charge).
-- **Reste à confirmer** : prix/garantie **FR** du SER9 MAX (LDLC / Amazon.fr).
+- **Avec NPU fort** : **Beelink SER9 MAX** (AI 7 350, 8C/16T, 32 Go, silencieux) — **1 029 €**.
+- **≤ 700 € (NPU assoupli)** : **Minisforum AI X1 — Ryzen 7 260, 32 Go, 699 €**
+  (8C/16T, châssis à chambre à vapeur) ; alternative **GMKtec K8 Plus** (8845HS, 729,99 € officiel,
+  moins cher sur AliExpress).
+- **À écarter** : GMKtec EVO-X1 / ASUS PN54 (**~42–47 dB**, bruyants) ; Beelink SER8 32 Go (~899 €, hors budget).
 
 ## Reproduire
 

@@ -41,7 +41,8 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - **Cas d'usage de référence = achat d'un mini PC** (recherche **multi-sources**, inclus dans ce
   sujet) : `docs/use-cases/mini-pc-purchase.md`. **Retenu : Beelink SER9 MAX (AI 7 350, 8C/16T,
   32 Go, 1 029 €, silencieux)** ; Minisforum AI X1 Pro (mode silence 36 dB, 1 249 €) ;
-  **à éviter** : GMKtec EVO-X1 / ASUS PN54 (~42–47 dB).
+  **à éviter** : GMKtec EVO-X1 / ASUS PN54 (~42–47 dB). **≤ 700 € (NPU assoupli) :
+  Minisforum AI X1 — Ryzen 7 260, 32 Go, 699 €** (8C/16T, chambre à vapeur).
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
