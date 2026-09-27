@@ -10,7 +10,6 @@
 - Paliers : T1 (`curl_cffi` + `trafilatura`), T2 (Playwright), recherche (**SearXNG** local).
 - **Cas d'usage inclus** : achat mini PC → `docs/use-cases/mini-pc-purchase.md` (clos) **+**
   achat **Realme GT7** pour mon père → `docs/use-cases/realme-gt7.md` (en cours).
-- Mur budgétaire : **pénurie DDR5 2026** → un 32 Go de marque connue, en UE, ≈ **800–960 €**.
 - État : outil stable ; installs **isolées** (Playwright, SearXNG) ; docs à jour.
 
 ## Objectif
@@ -37,16 +36,11 @@ lien vivant avec un lien périmé.
   SearXNG en conteneur **93 Mo** (`127.0.0.1:8888`, config `.searxng/`).
 - **SearXNG** : les moteurs **s'auto-suspendent ~180 s** après une rafale (DDG reste en captcha
   plus longtemps) → `--engines` pour router autour d'un moteur bloqué.
-- **Cas mini PC** (`docs/use-cases/mini-pc-purchase.md`) :
-  - Marque connue + UE + 32 Go : **GMKtec K8 Plus 799,95 €** (LDLC, en stock) ;
-    **Beelink SER8 32 Go 959 €** (`eu.bee-link.com`).
-  - **Aucun 8C/16T + 32 Go ≤ 700 €** (marque connue, sans douane) — mur = **prix de la RAM**.
-  - Invalidés après vérif utilisateur : **Geekom A6** (16 Go only), **Ninkear** (marque inconnue/16 Go),
-    **Minisforum AI X1** (hors UE → douane).
+- **Cas mini PC** : **clos** — 32 Go ≤700 € sans douane = **intenable** (pénurie DDR5).
+  Détails, candidats écartés et verdicts marques : `docs/use-cases/mini-pc-purchase.md`.
 - Bloqués : g2.com (403) ; DDG-html (202) ; Darty/Amazon (403/captcha).
 - Env : Python 3.14.7, uv 0.12.19, podman rootless (docker absent), 722 Go libres.
-- Versions outils (vérif. 2026-09-27) : trafilatura 2.2.0, curl_cffi 0.16.3, playwright 1.63.0,
-  scrapling 0.4.15, FlareSolverr 3.5.2, camoufox 0.5.6, firecrawl-py 4.44.0.
+- Versions outils (vérif. 2026-09-27) : table dans `docs/tooling.md`.
 
 ## Fichiers de référence
 - `~/.local/bin/webfetch` — le CLI (source : `dotfiles-cachyos/scripts/.local/bin/webfetch`).

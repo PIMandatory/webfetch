@@ -6,8 +6,11 @@
 
 - `--search`: added **`--engines`** (route around throttled SearXNG engines; config
   key `searxng_engines`). `--version` now reports `1.1.0`.
-- **Use case mini-PC** driven end-to-end across many sources; documented the **2026 DDR5
-  shortage** price wall and the **“HTTP 200 ≠ purchasable”** pitfall.
+- **Use cases** (product research):
+  - `docs/use-cases/mini-pc-purchase.md` — mini-PC, multi-source (**closed**: 32 GB ≤700 €
+    impossible in the 2026 DDR5 shortage); brand verdicts, seller checks.
+  - `docs/use-cases/realme-gt7.md` — Realme GT7 (12 GB) price research (**in progress**).
+  - Documented the **2026 DDR5 shortage** price wall and the **“HTTP 200 ≠ purchasable”** pitfall.
 
 ## [1.0.0] — 2026-09-27 — stable
 

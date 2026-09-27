@@ -1,4 +1,4 @@
-# Install plan & registry — T2 / T3
+# Install plan & registry — T2 · SearXNG · T3
 
 > **Règle** : rien n'est installé sans accord explicite, **dans un dossier isolé et
 > réversible**, et consigné ici. Rien de « définitif » (Stow/PATH) avant validation.
@@ -78,6 +78,8 @@ uv cache clean playwright            # paquet Python (optionnel)
 
 ## 3. T3 — FlareSolverr (anti-bot dur : Cloudflare, DataDome…)
 
+> **Non retenu** (course anti-bot + conteneur à maintenir) ; gardé « en réserve » uniquement si un site l'exige.
+
 ### But
 Résoudre le cas g2.com (403) et les « managed challenges » : proxy HTTP local qui
 pilote un navigateur furtif et renvoie le HTML + cookies.
@@ -106,7 +108,7 @@ Puis `webfetch` appellerait `POST http://127.0.0.1:8191/v1` (intégration à cod
 podman rm -f flaresolverr && podman rmi ghcr.io/flaresolverr/flaresolverr:latest
 ```
 
-## 3bis. Brique recherche — SearXNG (retenu, 2026-09-27)
+## 4. Brique recherche — SearXNG (retenu, 2026-09-27)
 
 ### But
 Trouver des pages (tests/avis, revendeurs) et croiser les infos — la brique qui manquait.
@@ -132,7 +134,7 @@ Usage : `webfetch --search "requête"`. Après un reboot : `podman start searxng
 podman rm -f searxng && podman rmi docker.io/searxng/searxng:latest
 ```
 
-## 4. Protocole « tester avant de rendre définitif »
+## 5. Protocole « tester avant de rendre définitif »
 
 1. **Bac à sable isolé** : tout dans `~/dev/webfetch/.browsers` et `.sandbox/`
    (ignorés par git — voir `.gitignore`).
@@ -145,7 +147,7 @@ podman rm -f searxng && podman rmi docker.io/searxng/searxng:latest
 4. **Décision** : on ne « fige » un outil (Stow/PATH, config) que si le test est
    concluant ; sinon on retire le dossier isolé. Résultats consignés dans `SESSION.md`.
 
-## 5. Registre de ce que NOUS avons installé
+## 6. Registre de ce que NOUS avons installé
 
 | Date | Composant | Emplacement | Taille | Statut |
 |---|---|---|---|---|
