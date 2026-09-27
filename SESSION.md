@@ -1,9 +1,12 @@
 # Session — Récupération web / scraping (webfetch)
 
 > Dernière mise à jour : 2026-09-27.
+>
+> **Projet** (git + remote GitHub `PIMandatory/webfetch`). Le CLI est un **outil durable** ;
+> **SearXNG ne tourne qu'à la demande** (arrêté hors usage).
 
 ## En bref (sujets)
-- Sujet : outillage fiable de récupération / scraping web pour mes recherches & achats.
+- **Projet** : outillage fiable de récupération / scraping web pour mes recherches & achats.
 - **CLI `webfetch`** (PEP 723/`uv`, paquet Stow `scripts`) — version **`1.1.0`**.
 - Modes : extraction (markdown / texte / html / links / json), **`--check`** (+ **`--render`**),
   **`--search`** (+ `--engines`).
