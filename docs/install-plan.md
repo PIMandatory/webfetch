@@ -106,6 +106,32 @@ Puis `webfetch` appellerait `POST http://127.0.0.1:8191/v1` (intégration à cod
 podman rm -f flaresolverr && podman rmi ghcr.io/flaresolverr/flaresolverr:latest
 ```
 
+## 3bis. Brique recherche — SearXNG (retenu, 2026-09-27)
+
+### But
+Trouver des pages (tests/avis, revendeurs) et croiser les infos — la brique qui manquait.
+
+### Ce qui est installé, et où
+- Image conteneur **`docker.io/searxng/searxng:latest`** (**93 Mo**) via **podman rootless**.
+- Config isolée : `~/dev/webfetch/.searxng/settings.yml` (sortie **JSON** activée, `limiter: false`).
+- Exposé **`127.0.0.1:8888`** uniquement.
+
+### Commandes
+```sh
+podman run -d --name searxng -p 127.0.0.1:8888:8080 \
+  -v ~/dev/webfetch/.searxng:/etc/searxng docker.io/searxng/searxng:latest
+```
+Usage : `webfetch --search "requête"`. Après un reboot : `podman start searxng`.
+
+### Contraintes
+- Conteneur **à (re)démarrer** (`podman start searxng`), mise à jour occasionnelle.
+- Moteurs amont parfois rate-limités (email à privilégier DDG/Bing/Brave/Startpage).
+
+### Désinstallation
+```sh
+podman rm -f searxng && podman rmi docker.io/searxng/searxng:latest
+```
+
 ## 4. Protocole « tester avant de rendre définitif »
 
 1. **Bac à sable isolé** : tout dans `~/dev/webfetch/.browsers` et `.sandbox/`
@@ -124,6 +150,7 @@ podman rm -f flaresolverr && podman rmi ghcr.io/flaresolverr/flaresolverr:latest
 | Date | Composant | Emplacement | Taille | Statut |
 |---|---|---|---|---|
 | 2026-09-27 | Playwright `chromium-headless-shell` 153 + ffmpeg | `~/dev/webfetch/.browsers/` | 266 Mo | installé, **T2 validé** (page JS) ; retrait : `rm -rf ~/dev/webfetch/.browsers` |
+| 2026-09-27 | **SearXNG** (métamoteur, conteneur podman rootless) | config `~/dev/webfetch/.searxng/`, port `127.0.0.1:8888` | 93 Mo | **actif**, recherche testée ; retrait : `podman rm -f searxng && podman rmi docker.io/searxng/searxng` |
 
 > Le cache `~/.cache/uv` (523 Mo) préexiste à ce sujet ; c'est un cache jetable,
 > pas une installation. Aucun paquet système, aucun `sudo` n'a été utilisé.

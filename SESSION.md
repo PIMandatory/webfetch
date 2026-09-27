@@ -8,8 +8,9 @@
 - Pipeline T1 prouvé : `curl_cffi` (impersonation Chrome) + `trafilatura` → markdown.
 - Mode **`--check`** : statut, redirections, **soft-404**, **challenge anti-bot**, repli Wayback.
 - Lecteur hébergé gratuit `r.jina.ai` opérationnel (rend le JS, sans clé).
-- 4 paliers définis (T0 statique → T3 anti-bot → T4 API managées) ; T2 (Playwright) non testé.
-- État : T1 + `--check` opérationnels ; **T2 installé (isolé) et validé** ; T3 à décider.
+- 4 paliers définis (T0 statique → T3 anti-bot → T4 API managées) ; **T2 validé**, T3 écarté (non viable).
+- **Brique recherche retenue** : **SearXNG** local (conteneur podman) → `webfetch --search`.
+- État : T1 + `--check` + `--check --render` + **`--search`** opérationnels.
 
 ## Objectif
 Disposer d'une méthode fiable pour récupérer, extraire et **valider** le contenu
@@ -22,6 +23,8 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - 2026-09-27 : script **PEP 723** exécuté par `uv` → aucune install système.
 - 2026-09-27 : `--check` est un mode de premier ordre (soft-404 + challenge + Wayback).
 - 2026-09-27 : privilégier local/gratuit ; API payantes en dernier recours.
+- 2026-09-27 : brique **recherche** = **SearXNG** auto-hébergé (podman rootless, sortie JSON) ;
+  API (Brave/Serper/Tavily) en alternative. **Scraper les SERP = écarté** (bloqué T1/T2).
 - 2026-09-27 : **rien n'est installé** sans validation ; installs éventuelles **isolées**
   et réversibles (`~/dev/webfetch/.browsers`), jamais dans le système. Plan + registre :
   `docs/install-plan.md`.
@@ -42,6 +45,8 @@ des achats — sans confondre un lien vivant avec un lien périmé.
   `~/dev/webfetch/.browsers/` (isolé, réversible) — T2 validé sur page JS. Registre : `docs/install-plan.md`.
 - **T2 validé** : `quotes.toscrape.com/js/` vide en T1 → restitué en T2. Invocation :
   `uv run --with playwright --script webfetch --render URL` (+ `PLAYWRIGHT_BROWSERS_PATH`).
+- **Recherche** : **SearXNG** conteneur `127.0.0.1:8888` (image 93 Mo) ; `webfetch --search` opérationnel.
+  A permis de croiser les avis (bruit) et de trouver les tests/revendeurs.
 - Env : Python 3.14.7, uv 0.12.19, Firefox (pas de Chromium) ; curl_cffi déjà installé.
 - `podman` rootless présent, `docker` absent, toutes les libs Chromium présentes, 722 Go libres.
 - Versions vérifiées (PyPI/npm/GitHub) : trafilatura 2.2.0, curl_cffi 0.16.3,
@@ -60,5 +65,6 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - [ ] **Décider** : formaliser l'adaptateur AliExpress dans `webfetch` ou garder en script séparé.
 - [ ] **Décider T3** : FlareSolverr via podman rootless (seulement si T2 insuffisant).
 - [ ] Si T2 devient courant : intégrer `playwright` aux deps + `browsers_path` en config.
-- [ ] Ajouter une brique « recherche » (SearXNG local ou API) pour remplacer DDG-html.
+- [x] Brique **recherche** (SearXNG local) intégrée : `webfetch --search` (2026-09-27).
 - [ ] Option `--archive` qui **récupère** le snapshot au lieu de seulement l'afficher.
+- [ ] **Décider** : formaliser l'adaptateur AliExpress (`--products`) ou garder en script séparé.

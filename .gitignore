@@ -2,3 +2,4 @@
 .browsers/
 .sandbox/
 __pycache__/
+.searxng/

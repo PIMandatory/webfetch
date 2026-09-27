@@ -9,7 +9,7 @@
 
 ```
 recherche produit
-  1. TROUVER    → candidats / URL de recherche ......... [recherche]  ← à mettre en place
+  1. TROUVER    → candidats / URL de recherche ......... SearXNG (local)
   2. FETCH      → HTML brut ............................. curl_cffi
   3. RENDRE JS  → page dynamique ........................ Playwright
   4. EXTRAIRE   → article | liste | specs ............... trafilatura | parseur
@@ -27,7 +27,7 @@ recherche produit
 | **Extraction article** | blog / presse / doc → texte propre | **`trafilatura`** | `readability-lxml`, `markitdown` (Microsoft) | ✅ |
 | **Extraction liste/specs** | produits, prix, grille de specs | **parseur dédié** (JSON embarqué / DOM) | `Crawlee`, `Scrapy` (volumineux), `Playwright.evaluate` | ✅ |
 | **Validation de liens** | « vivant » vs « mort / périmé » | **`webfetch --check`** (+ `--render` si JS) | `lychee`, `muffet`, `linkchecker` (CLI génériques) | ✅ |
-| **Recherche / croisement** | trouver, recouper avis/bruit | **SearXNG** auto-hébergé (local) **ou** **API** Brave/Serper | `Tavily`, `Exa` (API) | ❌ à mettre en place |
+| **Recherche / croisement** | trouver, recouper avis/bruit | **SearXNG** auto-hébergé (local, conteneur) | **API** Brave/Serper, `Tavily`, `Exa` | ✅ |
 | **Fiches constructeur** | specs officielles (TDP, RAM) | **fetch direct** (`curl_cffi`) | `r.jina.ai`, sitemap produit | ✅ |
 | **Archive** | récupérer un lien mort | **Wayback Machine API** | `archive.today` | ✅ (affichage) |
 
@@ -47,5 +47,5 @@ recherche produit
 |---|---|
 | Trouver des candidats | ✅ 8 mini PC (0 AI 7 350 sur AliExpress) |
 | Liens garantis vivants | ✅ validés (`--check --render`) |
-| Specs (CPU / RAM / TDP) | ✅ GMKtec TDP publié ; Firebat RAM contradictoire (24 vs 32 Go) |
-| Bruit / silence | ❌ faute de brique **recherche** |
+| Specs (CPU / RAM / TDP) | ✅ GMKtec TDP 15–54 W ; Firebat RAM = SODIMM extensible (24/32/64 Go) |
+| Bruit / silence | ✅ via recherche : **EVO-X1 ≈ 45 dB(A) en charge (bruyant)** ; Firebat A8 discret |
