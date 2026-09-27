@@ -8,7 +8,8 @@
 - Modes : extraction (markdown / texte / html / links / json), **`--check`** (+ **`--render`**),
   **`--search`** (+ `--engines`).
 - Paliers : T1 (`curl_cffi` + `trafilatura`), T2 (Playwright), recherche (**SearXNG** local).
-- **Cas d'usage inclus** : achat mini PC → `docs/use-cases/mini-pc-purchase.md` (plus un sujet à part).
+- **Cas d'usage inclus** : achat mini PC → `docs/use-cases/mini-pc-purchase.md` (clos) **+**
+  achat **Realme GT7** pour mon père → `docs/use-cases/realme-gt7.md` (en cours).
 - Mur budgétaire : **pénurie DDR5 2026** → un 32 Go de marque connue, en UE, ≈ **800–960 €**.
 - État : outil stable ; installs **isolées** (Playwright, SearXNG) ; docs à jour.
 
@@ -53,7 +54,8 @@ lien vivant avec un lien périmé.
 - `docs/tooling.md` — paysage des outils, paliers T0–T4, protocole, versions.
 - `docs/pipeline.md` — **état des briques** (testées/nécessaires).
 - `docs/install-plan.md` — prérequis, tailles, commandes isolées, retrait, registre installs.
-- `docs/use-cases/mini-pc-purchase.md` — **cas d'usage de référence** (achat mini PC, multi-sources).
+- `docs/use-cases/mini-pc-purchase.md` — **cas d'usage** achat mini PC, multi-sources (clos).
+- `docs/use-cases/realme-gt7.md` — **cas d'usage** achat Realme GT7 (12 Go), en cours.
 - `examples/aliexpress_search.py` — exemple d'extraction d'un listing.
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
