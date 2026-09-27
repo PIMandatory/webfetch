@@ -61,9 +61,10 @@ lien vivant avec un lien périmé.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
 ## TODO
-- [ ] **Reprendre la recherche** : 3 modèles 32 Go (boutique officielle **AliExpress**, **entrepôt EU**)
-  **ou** un modèle précis (Beelink SER8 / GMKtec K8 Plus / Minisforum UM890 Pro).
-- [ ] **Vérifier les marques** (Ninkear / Trigkey / AOOSTAR / BOSGAME…) si on élargit au-delà de Beelink/GMKtec/Minisforum.
+- [ ] **Realme GT7** (en cours) : confirmer prix **Amazon.fr / Rue du Commerce / Cdiscount** ;
+  vérifier le **vendeur AliExpress** (EU vs Chine) ; surveiller une **promo**
+  (alertes/vérif. **automatisées = plus tard, à la demande**).
+- [x] **mini PC** : **clos** — 32 Go ≤700 € sans douane **intenable** (pénurie DDR5). Reprendre si la RAM baisse.
 - [ ] **Décider** : formaliser l'adaptateur AliExpress (`--products`) dans `webfetch` ou garder en script.
 - [ ] **Décider T3** (FlareSolverr via podman) — seulement si un site l'exige.
 - [ ] `--archive` : **récupérer** le snapshot, pas seulement l'afficher.
