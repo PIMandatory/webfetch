@@ -79,6 +79,24 @@ Critères revus : on garde **8C/16T, 32 Go, silencieux** ; on **abandonne le NPU
 - **Alternative sans douane** : GMKtec K8 Plus via **AliExpress** (TVA prépayée, ~600 € configs)
   ou **LDLC** (799,95 €, garantie locale mais > budget).
 
+## Shortlist ≤ 700 € SANS douane (revendeurs fiables) — vérifiée 2026-09-27
+
+Critères : **8C/16T · 32 Go · silencieux · ≤ 700 € · revendeur FR/EU (pas de douane)** · NPU assoupli.
+
+| Modèle | CPU | Config | Bruit (mesuré) | Prix | Source (sans douane) | Critères |
+|---|---|---|---|---|---|---|
+| **Ninkear M8** | Ryzen 7 **8745HS** (8C/16T) | **32 Go + 1 To** | **~37–38 dB max** | **599 €** | **Darty (FR)** | ✅✅✅✅ |
+| Geekom A6 | Ryzen 7 **6800H** (8C/16T, Zen3+) | 32 Go (max 64) | à confirmer | 599–649 € | `geekom.fr` (EU) | ✅✅❓✅ |
+| GMKtec K8 Plus | Ryzen 7 8845HS (8C/16T) | 32 Go + 1 To | silencieux (reviews) | ~690 € (deal) / **810 €** (officiel) | AliExpress GMKtec (EU) / LDLC 799,95 € | ✅✅✅⚠️ prix |
+
+### Écartés (défaut vs critères)
+- **BMAX B8 A Power** (8845HS, 32 Go) — 494,99 € Geekbuying mais **« fan quite loud under heavy load »** → **échoue au critère silence**.
+- **Beelink SER8** (32 Go) — silencieux (~34,6 dB) mais **~1 050 € (Fnac)** → **hors budget**.
+- **Minisforum AI X1** — 699 € mais **expédié hors UE** → douane (écarté).
+
+### Réserves de vérification
+- **Darty bloque l'automatisation (403)** : le **599 €** du Ninkear M8 est issu d'un comparateur/snippet, **à revérifier sur la page** ; idem `Amazon.fr` (captcha) → prix SER8/K8 Plus partiellement non vérifiés en direct.
+
 ## Conclusion
 
 - **Avec NPU fort** : **Beelink SER9 MAX** (AI 7 350, 8C/16T, 32 Go, silencieux) — **1 029 €**.
