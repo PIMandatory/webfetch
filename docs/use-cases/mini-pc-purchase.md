@@ -147,10 +147,23 @@ Fiches **GMKtec K8 Plus** expédiées **depuis la Pologne** avec **« TVA inclus
 ## Conclusion
 
 - **Avec NPU fort** : **Beelink SER9 MAX** (AI 7 350, 8C/16T, 32 Go, silencieux) — **1 029 €**.
-- **≤ 700 € (NPU assoupli)** : **Minisforum AI X1 — Ryzen 7 260, 32 Go, 699 €**
-  (8C/16T, châssis à chambre à vapeur) ; alternative **GMKtec K8 Plus** (8845HS, 729,99 € officiel,
-  moins cher sur AliExpress).
-- **À écarter** : GMKtec EVO-X1 / ASUS PN54 (**~42–47 dB**, bruyants) ; Beelink SER8 32 Go (~899 €, hors budget).
+- **≤ 700 € (NPU assoupli, sans douane)** : **AUCUN 8C/16T + 32 Go** — mur = **pénurie DDR5**.
+- **AOOSTAR GEM12+ Pro** (8845HS, marque ⭐⭐⭐⭐) : configuré **24 Go/1 To ≈ 600 €** mais **uniquement sur
+  aoostar.com → douane à la charge de l'acheteur** (« does not include tax/duties ») → **écarté**.
+- **Barebone + RAM** : barebone EU ~335 € + **32 Go DDR5 SODIMM ~580 €** (LDLC) + SSD ≈ **965 €** → **irraisonnable**.
+- **À écarter** : GMKtec EVO-X1 / ASUS PN54 (**~42–47 dB**, bruyants) ; Beelink SER8 32 Go (~899–959 €).
+
+### Synthèse des prix « 32 Go, sans douane » (2026-09-27)
+| Route | Prix | Douane | Verdict |
+|---|---|---|---|
+| GMKtec K8 Plus 32 Go — LDLC | 799,95 € | non | ✅ mais > budget |
+| Beelink SER8 32 Go — eu.bee-link.com | 959 € | non | ❌ cher |
+| AOOSTAR GEM12+ Pro 24 Go — aoostar.com | ~600 € | **oui (acheteur)** | ❌ |
+| Barebone + RAM 32 Go | ~965 € | oui/non | ❌ irraisonnable |
+| AliExpress EU (K8 Plus) | ~400 € | non | ❌ **barebone seulement** |
+
+→ **Conclusion** : soit **~800 €** (32 Go, marque connue, UE), soit **24 Go** configuré, soit **attendre**
+la détente de la DDR5.
 
 ## Reproduire
 
