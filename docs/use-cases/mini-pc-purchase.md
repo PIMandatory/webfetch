@@ -90,6 +90,23 @@ Critères : **8C/16T · 32 Go · silencieux · ≤ 700 € · revendeur FR/EU (p
 - Conséquence : un **32 Go** de **marque connue** chez un revendeur **FR/EU** coûte **≥ 800 €** aujourd'hui.
   Ce n'est **pas** un problème de sourcing, c'est le **prix de la RAM**.
 
+### Verdict des marques (source : pcbuildadvisor 2026 + notebookcheck/TechRadar, 2026-09-27)
+
+| Marque | Build | Support | Fiabilité | Verdict |
+|---|---|---|---|---|
+| **GEEKOM** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | **Le plus sûr** (meilleur SAV) |
+| **Minisforum** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Excellent (enthousiastes) ; 4,4/5 Trustpilot |
+| **Beelink** | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | Solide budget/mid-range |
+| **GMKtec** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | « Tinkerer », **support minimal** |
+| **AOOSTAR** | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | Récent, prometteur ; support léger |
+| **ACEMAGIC** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⚠️ **scandale malware préinstallé (2024)** |
+| **Trigkey** | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | Ultra-budget (puces N100), pas de 32 Go perf |
+
+- Non notées ici : **Ninkear, BOSGAME, BMAX, NiPoGi** — reviews existent (Ninkear → minipc-review ;
+  BOSGAME → notebookcheck + TechRadar) mais **communauté/SAV limités**.
+- Enseignement : les marques **fiables** (GEEKOM/Minisforum/Beelink) ne tiennent **pas ≤700 € en 32 Go** ;
+  celles qui tiennent le prix (GMKtec/AOOSTAR) ont un **support plus faible**.
+
 ## Options réalistes (32 Go · marque connue · sans douane)
 
 | Option | Modèle | Prix | Source | Douane |
