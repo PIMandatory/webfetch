@@ -64,6 +64,21 @@ Critères revus : on garde **8C/16T, 32 Go, silencieux** ; on **abandonne le NPU
   (conforme au compromis). Radeon 780M.
 - ⚠️ `idealo` : 669 € = config **inférieure** ; la **32 Go/1 To est à ~899 €**.
 
+### Fiche d'achat — Minisforum AI X1 (Ryzen 7 260, 32 Go + 1 To) ✅ **retenu**
+
+- **Lien** : https://minisforumpc.fr/products/minisforum-ai-x1 — variante *AMD Ryzen 7 260 /
+  32GB RAM + 1TB SSD* (SKU **X131EU**).
+- **Prix** : **699 €** · **en stock** (`InStock`).
+- **Garantie** : **2 ans** (réparation, MINISFORUM ; retour aux frais du client, réexpédition à leur charge).
+- **Livraison** : gratuite, mais **expédiée hors UE** — boutique opérée par **Econ Technology Ltd
+  (Manchester, UK)** ; transporteurs cités : **EMS / China Post / HongKong Post**. La politique
+  mentionne explicitement la **douane/TVA d'importation** (remboursées par Minisforum sur justificatif
+  si vous les payez, + option « assurance tarifaire » 30 €). **Délais longs** possibles.
+- **Pas d'entrepôt UE** : `minisforum.eu` est vide, `store.minisforum.com` = boutique globale ;
+  **aucun revendeur FR identifié** pour l'AI X1.
+- **Alternative sans douane** : GMKtec K8 Plus via **AliExpress** (TVA prépayée, ~600 € configs)
+  ou **LDLC** (799,95 €, garantie locale mais > budget).
+
 ## Conclusion
 
 - **Avec NPU fort** : **Beelink SER9 MAX** (AI 7 350, 8C/16T, 32 Go, silencieux) — **1 029 €**.
