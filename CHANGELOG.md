@@ -1,6 +1,13 @@
 # Changelog — webfetch
 
-> History of the `webfetch` subject (tool + study). Newest first.
+> History of `webfetch`. Newest first.
+> **Versioning policy (since 2026-09-27)**: the **git tag = the tool version** (`webfetch --version`).
+> Tags `v0.1–v1.9` are kept as **historical study milestones**.
+
+## [2.0.0] — 2026-09-27
+
+- **Versioning aligned**: git tag = tool version from now on; reset to `2.0.0` (above the
+  historical study tags `v0.1–v1.9`). Feature set = 1.2.0 (auto one-shot SearXNG).
 
 ## [1.2.0] — 2026-09-27
 
