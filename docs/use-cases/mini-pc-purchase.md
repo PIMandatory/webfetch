@@ -83,24 +83,32 @@ Critères revus : on garde **8C/16T, 32 Go, silencieux** ; on **abandonne le NPU
 
 Critères : **8C/16T · 32 Go · silencieux · ≤ 700 € · revendeur FR/EU (pas de douane)** · NPU assoupli.
 
-> ⚠️ Les **URLs produit sont volatiles** (référence changée, rupture, variante). Ci-dessous :
-> **pages de recherche/catégorie (stables)** + fiche vérifiée quand possible.
+## Réalité du marché 2026 (pourquoi ≤ 700 € + 32 Go est intenable)
 
-| Modèle | CPU | Config | Bruit | Prix | Liens fiables |
-|---|---|---|---|---|---|
-| **Geekom A6** | Ryzen 7 **6800H** (8C/16T) | **32 Go** (choisir la variante) | à confirmer | **649 €** | Fiche : https://www.geekom.fr/geekom-a6-mini-pc/ · Catégorie : https://www.geekom.fr/mini-pc/ |
-| **Ninkear M8** | Ryzen 7 **8745HS** (8C/16T) | **32 Go + 1 To** | ~37–38 dB | **599 €** | Boutique : https://ninkear.com/collections/mini-pc · Darty (recherche) : https://www.darty.com/nav/recherche?text=ninkear+m8 |
-| GMKtec K8 Plus | Ryzen 7 8845HS (8C/16T) | 32 Go + 1 To | silencieux | 799,95 € (**hors budget**) | Recherche LDLC : https://www.ldlc.com/recherche/gmktec%20k8%20plus/ |
+- **Pénurie DDR5 SODIMM** : un module **16 Go ≈ 160–300 €** ; hausses Samsung/SK Hynix
+  **+60–70 %** (T1 2026). → **32 Go de RAM seule ≈ 300 €+**.
+- Conséquence : un **32 Go** de **marque connue** chez un revendeur **FR/EU** coûte **≥ 800 €** aujourd'hui.
+  Ce n'est **pas** un problème de sourcing, c'est le **prix de la RAM**.
 
-### Écartés (défaut vs critères)
-- **BMAX B8 A Power** (8845HS, 32 Go) — 494,99 € mais **« fan quite loud under heavy load »** → **échoue au silence** : https://fr.geekbuying.com/item/BMAX-B8-A-Power-AI-Mini-PC-AMD-Ryzen-7-Pro-8845HS-32-Go-1-To-10003838.html
-- **Beelink SER8** (32 Go) — silencieux (~34,6 dB) mais **~1 050 €** → **hors budget** : https://www.idealo.fr/prix/205489945/beelink-ser8.html
-- **Minisforum AI X1** — 699 € mais **expédié hors UE** → douane : https://minisforumpc.fr/products/minisforum-ai-x1
+## Options réalistes (32 Go · marque connue · sans douane)
+
+| Option | Modèle | Prix | Source | Douane |
+|---|---|---|---|---|
+| **Recommandé** | GMKtec NucBox K8 Plus (8845HS, 32 Go/1 To) | **799,95 €** | **LDLC** (en stock) | non |
+| En budget | GMKtec NucBox K8 Plus (32 Go/1 To) | **~690 €** | AliExpress **GMKtec officiel** (entrepôt EU, TVA incluse) | non |
+| Attendre | — | — | la RAM doit baisser | — |
+
+- LDLC (recherche) : https://www.ldlc.com/recherche/gmktec%20k8%20plus/
+- Boutique GMKtec EU : https://gmktec.fr/collections/mini-pc
+
+### Invalidés (après vérification utilisateur, 2026-09-27)
+- **Geekom A6** — **pas d'option 32 Go** (16 Go seulement) → écarté (mon « 32 Go/649 € » était faux, extrait de page trompeur).
+- **Ninkear M8** — **marque inconnue** + **16 Go** → écarté (doute).
+- **GMKtec K8 Plus** — bonnes specs **mais trop cher** (32 Go = 800 € au minimum).
 
 ### Réserve de vérification
-- **Geekom A6** : la page ouvre sur **16 Go** ; il faut **choisir la variante 32 Go (649 €)** — d'où le malentendu initial.
-- **Darty / Amazon bloquent l'automatisation** → donner des **pages de recherche** plutôt que des refs produit (qui changent). Le **599 €** du Ninkear M8 est issu d'un comparateur.
-- Leçon : `webfetch --check` valide la **page**, pas la **disponibilité produit** (voir `PITFALLS.md`).
+- **Darty / Amazon bloquent l'automatisation** → toujours privilégier des **pages de recherche** stables.
+- Leçon : `webfetch --check` valide la **page**, pas la **disponibilité produit** ni la **config** (voir `PITFALLS.md`).
 
 ## Conclusion
 
