@@ -24,3 +24,19 @@
 - **Cause** : protection DataDome/Cloudflare dure.
 - **Correctif** : FlareSolverr / Camoufox, ou accepter la limite.
 - **Mots-clés** : 403, g2, datadome.
+
+## Reddit sert un challenge anti-bot en HTTP 200 (2026-09-27)
+- **Symptôme** : un sous-reddit inexistant renvoie **200** avec « Prove your humanity » →
+  un simple contrôle de statut le déclarerait vivant à tort.
+- **Cause** : mur anti-bot servi avec un code 200.
+- **Correctif** : classifier sur le **contenu**, pas seulement le statut ; marqueurs
+  `prove your humanity`, `verify you are human`, `just a moment`, `cf-chl`…
+  (voir `webfetch --check`).
+- **Mots-clés** : reddit, challenge, 200, anti-bot, soft-block.
+
+## `r.history` de curl_cffi peut être vide malgré une redirection (2026-09-27)
+- **Symptôme** : `https://google.com` → `r.url` = `https://www.google.com/` mais `len(r.history) == 0`.
+- **Cause** : l'historique de redirection n'est pas toujours peuplé par curl_cffi.
+- **Correctif** : détecter une redirection en comparant l'**URL d'origine** et l'**URL finale**
+  (en ignorant le `/` final), pas via `r.history`.
+- **Mots-clés** : curl_cffi, history, redirect, r.url.
