@@ -2,6 +2,13 @@
 
 > History of the `webfetch` subject (tool + study). Newest first.
 
+## [1.1.0] — 2026-09-27
+
+- `--search`: added **`--engines`** (route around throttled SearXNG engines; config
+  key `searxng_engines`). `--version` now reports `1.1.0`.
+- **Use case mini-PC** driven end-to-end across many sources; documented the **2026 DDR5
+  shortage** price wall and the **“HTTP 200 ≠ purchasable”** pitfall.
+
 ## [1.0.0] — 2026-09-27 — stable
 
 First stable release.

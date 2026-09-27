@@ -97,3 +97,11 @@
   et les **variantes/prix**) ; **privilégier des pages de recherche/catégorie stables** ;
   **ne jamais livrer une URL produit** sans vérifier stock + config au moment de l'envoyer.
 - **Mots-clés** : disponibilité, rupture, stock, fiche produit, variantes, liens morts.
+
+## SearXNG : moteurs auto-suspendus ~180 s (2026-09-27)
+- **Symptôme** : `webfetch --search` renvoie **0 résultat** alors qu'il marchait un peu plus tôt.
+- **Cause** : les moteurs amont limitent SearXNG (logs : `suspended_time=180` pour **Brave/Google** ;
+  **DDG** part en **CAPTCHA**, plus longtemps). Le conteneur SearXNG, lui, n'est pas bloqué.
+- **Correctif** : `--engines google,bing` (route autour du moteur bloqué, cf. option ajoutée) ;
+  attendre **~3 min de calme** ; ne pas requêter en rafale.
+- **Mots-clés** : searxng, suspended_time, 180, rate limit, captcha, --engines.
