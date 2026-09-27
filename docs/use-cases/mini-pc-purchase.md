@@ -101,6 +101,23 @@ Critères : **8C/16T · 32 Go · silencieux · ≤ 700 € · revendeur FR/EU (p
 - LDLC (recherche) : https://www.ldlc.com/recherche/gmktec%20k8%20plus/
 - Boutique GMKtec EU : https://gmktec.fr/collections/mini-pc
 
+### AliExpress — entrepôt EU (pas de douane) — 2026-09-27
+
+Fiches **GMKtec K8 Plus** expédiées **depuis la Pologne** avec **« TVA incluse | Sans droits
+ de douane »** → **entrepôt EU, pas de frais surprise** :
+
+| Fiche | Vendeur | Prix affiché (base) | Lien |
+|---|---|---|---|
+| K8 Plus | Vancce Tech Store | 375,78 € | https://fr.aliexpress.com/item/1005011858457177.html |
+| K8 Plus | (EU) | 385,76 € | https://fr.aliexpress.com/item/1005012273370137.html |
+| K8 Plus | BULUTE EU Store | 398,70 € | https://fr.aliexpress.com/item/1005012815789998.html |
+
+- Variantes : **DDR5 32GB 500GB / 32GB 1TB** (etc.) — le prix affiché est celui de la variante
+  basse ; **la 32 Go/1 To est plus chère** (prix non extrait automatiquement : chargé en JS).
+- Vendeurs = **revendeurs** (pas la boutique officielle GMKtec) mais **entrepôt EU**.
+- ⚠️ Limite outil : le **prix par variante** et l'**entrepôt** ne sont lisibles qu'en **rendu (T2)**,
+  pas en T1 (`webfetch --render`).
+
 ### Invalidés (après vérification utilisateur, 2026-09-27)
 - **Geekom A6** — **pas d'option 32 Go** (16 Go seulement) → écarté (mon « 32 Go/649 € » était faux, extrait de page trompeur).
 - **Ninkear M8** — **marque inconnue** + **16 Go** → écarté (doute).
