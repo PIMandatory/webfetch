@@ -38,9 +38,9 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - Marche : T1 markdown/texte/html/links/json ; `--check` (OK / dead 404 / redirect /
   **soft-404** / **challenge** / archive) ; `--check --render` (validation de pages JS,
   ex. liens produit AliExpress) ; `--from-file` ; cache opt-in.
-- **Cas d'usage de référence = recherche mini PC sur AliExpress** (désormais **inclus** dans ce
-  sujet) : `docs/use-cases/aliexpress-mini-pc.md` ; extraction via `examples/aliexpress_search.py`
-  → 8 candidats, liens validés (`--check --render`), **specs + bruit croisés** (Firebat A8 vs EVO-X1).
+- **Cas d'usage de référence = achat d'un mini PC** (recherche **multi-sources**, inclus dans ce
+  sujet) : `docs/use-cases/mini-pc-purchase.md`. Profil 8C/16T dispo : **Beelink SER9 MAX (AI 7 350, 32 Go, 1 029 €)** ;
+  Minisforum AI X1 1 139 €, GMKtec EVO-X1 LDLC 1 200 € (mais **bruyant**).
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
@@ -61,7 +61,7 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - `docs/tooling.md` — paysage des outils, paliers T0–T4, protocole, versions.
 - `docs/pipeline.md` — **état des briques** (testées/nécessaires) pour le cas d'usage réel.
 - `docs/install-plan.md` — prérequis, tailles, commandes isolées, retrait, registre installs.
-- `docs/use-cases/aliexpress-mini-pc.md` — **cas d'usage de référence** (recherche mini PC).
+- `docs/use-cases/mini-pc-purchase.md` — **cas d'usage de référence** (achat mini PC, multi-sources).
 - `examples/aliexpress_search.py` — exemple d'extraction d'un listing (prototype promu).
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
