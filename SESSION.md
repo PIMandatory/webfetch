@@ -11,6 +11,7 @@
 - 4 paliers définis (T0 statique → T3 anti-bot → T4 API managées) ; **T2 validé**, T3 écarté (non viable).
 - **Brique recherche retenue** : **SearXNG** local (conteneur podman) → `webfetch --search`.
 - État : T1 + `--check` + `--check --render` + **`--search`** opérationnels.
+- **Version stable `v1.0.0`** figée ; le **cas mini PC** est intégré comme **cas d'usage** (plus un sujet séparé).
 
 ## Objectif
 Disposer d'une méthode fiable pour récupérer, extraire et **valider** le contenu
@@ -25,6 +26,8 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - 2026-09-27 : privilégier local/gratuit ; API payantes en dernier recours.
 - 2026-09-27 : brique **recherche** = **SearXNG** auto-hébergé (podman rootless, sortie JSON) ;
   API (Brave/Serper/Tavily) en alternative. **Scraper les SERP = écarté** (bloqué T1/T2).
+- 2026-09-27 : **outil figé en `v1.0.0`** (stable). Le **cas mini PC** devient un
+  **cas d'usage inclus** dans ce sujet (`docs/use-cases/`), plus un sujet autonome.
 - 2026-09-27 : **rien n'est installé** sans validation ; installs éventuelles **isolées**
   et réversibles (`~/dev/webfetch/.browsers`), jamais dans le système. Plan + registre :
   `docs/install-plan.md`.
@@ -35,9 +38,9 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - Marche : T1 markdown/texte/html/links/json ; `--check` (OK / dead 404 / redirect /
   **soft-404** / **challenge** / archive) ; `--check --render` (validation de pages JS,
   ex. liens produit AliExpress) ; `--from-file` ; cache opt-in.
-- **Cas de test = AliExpress** : prototype jetable `.sandbox/ali_search.py` (parse le JSON
-  produits embarqué, filtres CPU/RAM) → **8 candidats mini-pc, liens validés** via
-  `--check --render`. Résultat côté sujet mini-pc : `~/dev/mini-pc/docs/aliexpress-shortlist-2026-09-27.md`.
+- **Cas d'usage de référence = recherche mini PC sur AliExpress** (désormais **inclus** dans ce
+  sujet) : `docs/use-cases/aliexpress-mini-pc.md` ; extraction via `examples/aliexpress_search.py`
+  → 8 candidats, liens validés (`--check --render`), **specs + bruit croisés** (Firebat A8 vs EVO-X1).
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
@@ -54,9 +57,12 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 
 ## Fichiers de référence
 - `~/.local/bin/webfetch` — le CLI (source : `dotfiles-cachyos/scripts/.local/bin/webfetch`).
+- `CHANGELOG.md` — histoire du sujet/outil.
 - `docs/tooling.md` — paysage des outils, paliers T0–T4, protocole, versions.
 - `docs/pipeline.md` — **état des briques** (testées/nécessaires) pour le cas d'usage réel.
 - `docs/install-plan.md` — prérequis, tailles, commandes isolées, retrait, registre installs.
+- `docs/use-cases/aliexpress-mini-pc.md` — **cas d'usage de référence** (recherche mini PC).
+- `examples/aliexpress_search.py` — exemple d'extraction d'un listing (prototype promu).
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
