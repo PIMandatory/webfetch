@@ -3,11 +3,11 @@
 > Dernière mise à jour : 2026-09-27.
 >
 > **Projet** (git + remote GitHub `PIMandatory/webfetch`). Le CLI est un **outil durable** ;
-> **SearXNG ne tourne qu'à la demande** (arrêté hors usage).
+> **SearXNG est géré automatiquement en one-shot** (démarré/arrêté par `webfetch --search`, arrêté hors usage).
 
 ## En bref (sujets)
 - **Projet** : outillage fiable de récupération / scraping web pour mes recherches & achats.
-- **CLI `webfetch`** (PEP 723/`uv`, paquet Stow `scripts`) — version **`1.1.0`**.
+- **CLI `webfetch`** (PEP 723/`uv`, paquet Stow `scripts`) — version **`1.2.0`**.
 - Modes : extraction (markdown / texte / html / links / json), **`--check`** (+ **`--render`**),
   **`--search`** (+ `--engines`).
 - Paliers : T1 (`curl_cffi` + `trafilatura`), T2 (Playwright), recherche (**SearXNG** local).
@@ -32,9 +32,10 @@ lien vivant avec un lien périmé.
 - 2026-09-27 : seuil réaliste — en **marque connue + UE + 32 Go**, plancher ≈ **800 €**.
 
 ## État / données clés (2026-09-27)
-- **CLI** : `~/.local/bin/webfetch` (source `dotfiles-cachyos/scripts/`), `--version` = `1.1.0`.
+- **CLI** : `~/.local/bin/webfetch` (source `dotfiles-cachyos/scripts/`), `--version` = `1.2.0`.
 - **Invocations** : T2 = `uv run --with playwright --script webfetch --render URL`
-  (+ `PLAYWRIGHT_BROWSERS_PATH`) ; recherche = `webfetch --search "…" [--engines google,bing]`.
+  (+ `PLAYWRIGHT_BROWSERS_PATH`) ; recherche = `webfetch --search "…" [--engines google,bing]`
+  (**one-shot** : démarre/arrête SearXNG ; `--no-autostart` pour gérer à la main).
 - **Installs isolées** : Playwright headless-shell **266 Mo** (`.browsers/`) ;
   SearXNG en conteneur **93 Mo** (`127.0.0.1:8888`, config `.searxng/`).
 - **SearXNG** : les moteurs **s'auto-suspendent ~180 s** après une rafale (DDG reste en captcha

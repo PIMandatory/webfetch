@@ -123,11 +123,11 @@ Trouver des pages (tests/avis, revendeurs) et croiser les infos — la brique qu
 podman run -d --name searxng -p 127.0.0.1:8888:8080 \
   -v ~/dev/webfetch/.searxng:/etc/searxng docker.io/searxng/searxng:latest
 ```
-**Politique d'usage (webfetch = projet, SearXNG « à la demande »)** :
-- Lancer avant une session de recherche, arrêter après :
-  `podman start searxng` … `podman stop searxng`.
-- Le conteneur reste **arrêté hors usage** (économie ressources). L'outil `webfetch` (fetch/`--check`)
-  fonctionne **sans** SearXNG ; seul `webfetch --search` l'exige.
+**Politique d'usage (SearXNG « à la demande », automatique)** :
+- `webfetch --search` **démarre** le conteneur s'il est arrêté, fait la requête, puis **l'arrête**
+  (**one-shot**) → « fonctionnel à la demande, arrêté sinon ».
+- `--no-autostart` pour gérer à la main (`podman start searxng` / `podman stop searxng`).
+- Le conteneur reste **arrêté hors usage** ; `webfetch` (fetch / `--check`) marche **sans** SearXNG.
 
 ### Contraintes
 - Conteneur **à (re)démarrer** (`podman start searxng`), mise à jour occasionnelle.

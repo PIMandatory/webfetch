@@ -2,6 +2,12 @@
 
 > History of the `webfetch` subject (tool + study). Newest first.
 
+## [1.2.0] — 2026-09-27
+
+- **Reclassified as a project** (durable tool; GitHub `PIMandatory/webfetch`).
+- `--search`: **auto one-shot SearXNG** — starts the container if stopped, runs the query,
+  then stops it (options `--searxng-container`, `--no-autostart`). `--version` → `1.2.0`.
+
 ## [1.1.0] — 2026-09-27
 
 - `--search`: added **`--engines`** (route around throttled SearXNG engines; config
