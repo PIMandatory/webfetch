@@ -1,47 +1,45 @@
-# Pipeline — briques testées & nécessaires
+# Pipeline — briques viables & outils conseillés
 
-> État au **2026-09-27**. Cas d'usage concret : **recherche produit sur site protégé
-> (AliExpress) → candidats → liens validés → specs → décision d'achat**.
-> Légende : ✅ testé OK · ⚠️ partiel · ❌ manquant · ➖ non nécessaire (à ce jour).
+> État au **2026-09-27**. Cas d'usage : **recherche produit sur site protégé (AliExpress)
+> → candidats → liens validés → specs → décision d'achat**.
+> Objectif : ne garder que les **briques viables**, avec pour chacune l'**outil conseillé**,
+> **pour quel usage**, et les **alternatives viables**. ✅ = testé en vrai.
 
-## La chaîne du besoin
+## La chaîne (briques retenues)
 
 ```
 recherche produit
-  1. TROUVER      → URL de recherche / candidats ........ ← ❌ BRIQUE MANQUANTE (SERP)
-  2. FETCH (T1)   → HTML brut ........................... ✅ curl_cffi
-  3. EXTRAIRE     → liste structurée (JSON embarqué) .... ✅ parseur dédié (trafilatura ✗)
-  4. VALIDER      → liens vivants ....................... ✅ --check  (--render si JS)
-  5. RENDRE (T2)  → page produit réelle (JS) ............ ✅ Playwright (isolé)
-  6. SPECS        → CPU/RAM/TDP/ports ................... ✅ fiche AliExpress + constructeur
-  7. CROISER      → bruit/avis/fiabilité ................ ← ❌ BRIQUE MANQUANTE (SERP/API)
-  8. ARCHIVER     → lien mort → snapshot ................ ✅ Wayback (affichage ; récupération à faire)
+  1. TROUVER    → candidats / URL de recherche ......... [recherche]  ← à mettre en place
+  2. FETCH      → HTML brut ............................. curl_cffi
+  3. RENDRE JS  → page dynamique ........................ Playwright
+  4. EXTRAIRE   → article | liste | specs ............... trafilatura | parseur
+  5. VALIDER    → lien vivant / mort .................... --check
+  6. SPECS OFF. → fiche constructeur .................... fetch direct
+  7. ARCHIVER   → lien mort → snapshot .................. Wayback
 ```
 
-## Table des briques
+## Briques retenues — outil conseillé & alternatives
 
-| # | Brique | Outil | État | Preuve (2026-09-27) | Limite / note |
-|---|---|---|---|---|---|
-| 1 | Fetch HTTP | `curl_cffi` (impersonate chrome) | ✅ | AliExpress search 714 Ko ; wikipedia, HN, lemonde | ne voit pas le JS (page produit = « browser does not support JS ») |
-| 2 | Rendu JS | Playwright `chromium-headless-shell` | ✅ | `quotes.toscrape.com/js/` ; pages produit AliExpress | 266 Mo isolés ; 1 Chromium par requête |
-| 3 | Extraction article | `trafilatura` | ⚠️ | parfait sur articles (wikipedia/HN) | **jette les listings/produits** → à réserver aux articles |
-| 4 | Extraction liste | parseur JSON embarqué (dédié) | ✅ | ~60 produits/requête (ID, titre, prix, prix 30 j) | spécifique au site |
-| 5 | Extraction specs | parseur DOM (`li.specification--line`) | ✅ | fiche Firebat/GMKtec | dépend du layout de la page |
-| 6 | Validation liens | `webfetch --check` (+ `--render`) | ✅ | bidon→`SOFT404`, réels→`OK`, reddit→`CHALLENGE`, 404→`DEAD` | T2 requis pour les sites 100 % JS |
-| 7 | Anti-bot dur | FlareSolverr (non installé) | ➖ | g2.com → 403 non résolu | pas nécessaire jusqu'ici (AliExpress passe en T1/T2) |
-| 8 | Fiches constructeur | fetch direct | ✅ | `gmktec.com` (TDP 15–54 W), `firebatpc.com` (24 Go) | URL à trouver (pas toujours indexée) |
-| 9 | **Recherche web** | *aucune* | ❌ | DDG/Bing/Brave bloquent **T1 ET T2** (captcha) ; Jina bloqué | **bloque le croisement avis/bruit et la découverte** |
-| 10 | Archive liens morts | Wayback API | ⚠️ | disponibilité OK (affiche le snapshot) | ne **récupère** pas encore le contenu |
-| 11 | Cache / throttle | `webfetch --cache`, `sleep` | ⚠️ | cache opt-in implémenté | non stress-testé |
+| Brique | Pour quoi | Outil conseillé | Alternatives viables | ✅ testé |
+|---|---|---|---|---|
+| **Fetch HTTP** | récupérer le HTML, sites légers/protégés basiques | **`curl_cffi`** (`--impersonate chrome`) | `httpx`, `requests`, `r.jina.ai` (lecteur hébergé) | ✅ |
+| **Rendu JS** | pages dynamiques (SPA, fiche produit JS) | **Playwright** `chromium-headless-shell` | **Camoufox** (furtif), `r.jina.ai` (rendu côté serveur, zéro install) | ✅ |
+| **Extraction article** | blog / presse / doc → texte propre | **`trafilatura`** | `readability-lxml`, `markitdown` (Microsoft) | ✅ |
+| **Extraction liste/specs** | produits, prix, grille de specs | **parseur dédié** (JSON embarqué / DOM) | `Crawlee`, `Scrapy` (volumineux), `Playwright.evaluate` | ✅ |
+| **Validation de liens** | « vivant » vs « mort / périmé » | **`webfetch --check`** (+ `--render` si JS) | `lychee`, `muffet`, `linkchecker` (CLI génériques) | ✅ |
+| **Recherche / croisement** | trouver, recouper avis/bruit | **SearXNG** auto-hébergé (local) **ou** **API** Brave/Serper | `Tavily`, `Exa` (API) | ❌ à mettre en place |
+| **Fiches constructeur** | specs officielles (TDP, RAM) | **fetch direct** (`curl_cffi`) | `r.jina.ai`, sitemap produit | ✅ |
+| **Archive** | récupérer un lien mort | **Wayback Machine API** | `archive.today` | ✅ (affichage) |
 
-## Ce qu'il manque pour boucler le besoin
+## Écartées — contraintes non viables
 
-- **Brique 9 (recherche)** — le vrai verrou. Sans elle : ni croisement avec des
-  tests/avis (donc pas de jugement « bruit/silence »), ni découverte au-delà des
-  URLs déjà connues. Options : **SearXNG auto-hébergé** (podman, local, sans clé)
-  ou **API** (Brave / Serper / Tavily).
-- **Brique 10** — récupérer effectivement le snapshot Wayback (pas seulement l'afficher).
-- **Brique 7** — uniquement si un site cible bloque réellement (aucun cas à ce jour).
+| Brique / outil | Pourquoi écarté |
+|---|---|
+| **Scraping direct des SERP** (DuckDuckGo / Bing / Brave) | bloqué en **T1 ET T2** (captcha) → aucun résultat fiable, ni en HTTP ni en rendu |
+| **FlareSolverr** (anti-bot dur) | **course permanente** anti-bot + conteneur à maintenir, pour un seul cas (g2.com) → non viable en perso. *À garder « en réserve » uniquement si un site précis l'exige.* |
+
+> Note : `trafilatura` n'est **pas** écarté, mais **restreint aux articles** — pas aux
+> pages de liste (il en jette le contenu).
 
 ## Bilan pour le cas mini-pc
 
@@ -50,4 +48,4 @@ recherche produit
 | Trouver des candidats | ✅ 8 mini PC (0 AI 7 350 sur AliExpress) |
 | Liens garantis vivants | ✅ validés (`--check --render`) |
 | Specs (CPU / RAM / TDP) | ✅ GMKtec TDP publié ; Firebat RAM contradictoire (24 vs 32 Go) |
-| Bruit / silence | ❌ faute de brique 9 |
+| Bruit / silence | ❌ faute de brique **recherche** |
