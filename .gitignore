@@ -1,0 +1,4 @@
+# isolated download sandbox (browsers, test corpus, scratch)
+.browsers/
+.sandbox/
+__pycache__/
