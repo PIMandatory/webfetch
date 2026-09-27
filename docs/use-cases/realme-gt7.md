@@ -7,8 +7,8 @@
 ## Modèle à cibler (attention aux homonymes)
 | Nom | Puce | Remarque |
 |---|---|---|
-| **Realme GT7** | **Dimensity 9400e** | le modèle visé (12/256) |
-| Realme GT 7T | Dimensity 8400 Max | **moins cher** (~330 €), performant |
+| **Realme GT7** | **Dimensity 9400e** | **le modèle visé** (12/256) |
+| Realme GT 7T | Dimensity 8400 Max | ⚠️ **modèle DIFFÉRENT**, pas un équivalent → à ne pas confondre |
 | Realme GT7 Pro | Snapdragon 8 Elite | haut de gamme, plus cher |
 
 - Le bon SKU : « **realme GT 7 5G, 12 Go / 256 Go, Dimensity 9400e** ».
@@ -21,13 +21,12 @@
 | **AliExpress** | GT7 9400e, **version EU** | **~433 €** | import, **TVA prépayée** (pas de douane) |
 | AliExpress | GT7 9400e, version Chine | ~402 € | import (ROM Chine) |
 | **kimovil** (agrégateur FR) | GT7 12/256 Global | **~418 €** | agrégat multi-boutiques |
-| AliExpress | **GT 7T** (8400 Max) global | **~329 €** | alternative moins chère |
 | **leDénicheur** (revendeurs FR) | GT7 12/256 | **699 €** | retail FR (peu de boutiques) |
 | Rue du Commerce | GT7 12/256 | à confirmer | revendeur FR |
 | Boulanger / Cdiscount / Amazon.fr | GT7 | à confirmer | revendeurs FR |
 
 > Hausse confirmée : ton **300 € d'août** n'est plus dispo ; le plancher actuel tourne autour de
-> **400–435 €** (EU), voire ~330 € pour le **GT 7T**.
+> **400–435 €** (version EU).
 
 ## Revendeurs sérieux (liens)
 - **AliExpress (store realme officiel / gros vendeurs)** — version EU, TVA prépayée :
@@ -43,12 +42,11 @@
 ## Recommandation (provisoire)
 1. **Meilleur rapport qualité/prix maintenant** : **AliExpress, GT7 version EU ~433 €** — bon vendeur,
    **TVA incluse** (pas de douane). Sous réserve de vérifier le vendeur (store officiel realme).
-2. **Alternative maligne** : **Realme GT 7T (~330 €)** — même esprit, puce un cran en dessous.
-3. **Si tu peux attendre** : guetter une **promo** (ton 300 € était exceptionnel) — événements
-   AliExpress (11.11, etc.) ou baisse Amazon.fr.
-4. **Revendeurs FR** : prix souvent **plus élevés** (699 € vu) → à réserver au besoin de garantie FR.
+2. **Si tu peux attendre** : ton 300 € était **exceptionnel** → guetter une **promo** (11.11, etc.)
+   ou une baisse ; le plancher réaliste aujourd'hui est **~400–435 €**.
+3. **Revendeurs FR** : prix souvent **plus élevés** (699 € vu) → à réserver au besoin de garantie FR.
 
 ## TODO
 - [ ] Confirmer les prix **Amazon.fr / Rue du Commerce / Cdiscount** (bloqués en automatisation ; à lire dans le navigateur).
 - [ ] Vérifier le **vendeur AliExpress** (boutique officielle realme) + version **EU vs Chine**.
-- [ ] Mettre une **alerte promo** (11.11 / Black Friday) pour viser ~350 €.
+- [ ] *(plus tard, à ta demande)* **alertes / vérifications automatisées** (promo 11.11 / Black Friday).
