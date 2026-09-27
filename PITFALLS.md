@@ -64,7 +64,8 @@
   et la page produit *réelle* n'est visible qu'en **JS**.
 - **Correctif** : valider un lien produit avec **T2 (`--render`)**. La page morte a un
   **titre vide** et le texte « *Désolé, la page que vous essayez d'atteindre n'a pu être
-  trouvée :(* » → ajouter `n'a pu être trouvée` / `could not be found` aux marqueurs soft-404.
+  trouvée :(* » → marqueur soft-404 **ajouté** dans `webfetch` ; valider via
+  `webfetch --check --render <url>`.
 - **Mots-clés** : aliexpress, 200, soft-404, page introuvable, gatewayAdapt.
 
 ## AliExpress : la liste de résultats est un JSON embarqué, pas un « article » (2026-09-27)

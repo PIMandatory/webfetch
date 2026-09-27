@@ -30,7 +30,10 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 ## État / données clés (tests du 2026-09-27)
 - **Emplacement** : `~/.local/bin/webfetch` (Stow → `dotfiles-cachyos/scripts/`).
 - Marche : T1 markdown/texte/html/links/json ; `--check` (OK / dead 404 / redirect /
-  **soft-404** / **challenge** / archive) ; `--from-file` ; cache opt-in.
+  **soft-404** / **challenge** / archive) ; `--check --render` (validation de pages JS,
+  ex. liens produit AliExpress) ; `--from-file` ; cache opt-in.
+- **Cas de test = AliExpress** : prototype jetable `.sandbox/ali_search.py` (parse le JSON
+  produits embarqué, ~60 résultats/requête). Candidat mini-pc trouvé : Firebat A8 (AI 9 365).
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
@@ -51,9 +54,9 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
 ## TODO
-- [ ] **Cas de test** à fournir par l'utilisateur → mesurer T1 vs T2 dessus.
+- [ ] **Recherche mini-pc filtrée** via le prototype (CPU/RAM, exclusion accessoires).
+- [ ] **Décider** : formaliser l'adaptateur AliExpress dans `webfetch` ou garder en script séparé.
 - [ ] **Décider T3** : FlareSolverr via podman rootless (seulement si T2 insuffisant).
 - [ ] Si T2 devient courant : intégrer `playwright` aux deps + `browsers_path` en config.
-- [ ] Décider d'un repli auto en `--check` (challenge → tentative T2/T3) ?
 - [ ] Ajouter une brique « recherche » (SearXNG local ou API) pour remplacer DDG-html.
 - [ ] Option `--archive` qui **récupère** le snapshot au lieu de seulement l'afficher.
