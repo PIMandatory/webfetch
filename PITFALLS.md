@@ -77,3 +77,12 @@
   `"title":{"displayTitle":…}`, `"prices":{"salePrice":{"minPrice":…}}`, et le prix
   mini 30 j dans `sellingPoints`.
 - **Mots-clés** : aliexpress, search, productId, displayTitle, trafilatura, listing.
+
+## Moteurs de recherche : bloqués en T1 **et** T2 (2026-09-27)
+- **Symptôme** : DuckDuckGo / Bing / Brave renvoient un captcha ou « Enable JavaScript and
+  cookies to continue » via `curl_cffi` **et** via `--render` ; `r.jina.ai` sur ces URLs aussi.
+- **Cause** : protection anti-bot des SERP.
+- **Correctif** : passer par une **API de recherche** (Brave / Serper / Tavily) ou un
+  **SearXNG auto-hébergé**. Sans cette brique, impossible de croiser les specs avec des
+  tests/avis (bloque notamment l'évaluation « bruit/silence »).
+- **Mots-clés** : search, serp, duckduckgo, bing, brave, captcha, 202.
