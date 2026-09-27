@@ -56,3 +56,23 @@
 - **Correctif** : le build de repli ubuntu24.04 **fonctionne** (libs système présentes) ;
   le T2 a été validé sur une page JS. Ne pas s'inquiéter de l'avertissement.
 - **Mots-clés** : playwright, arch, unsupported, fallback, ubuntu24.04.
+
+## AliExpress : un ID produit inexistant renvoie HTTP 200 (2026-09-27)
+- **Symptôme** : `/item/1005000000000000.html` (ID bidon) renvoie **200** + redirection
+  `gatewayAdapt`, exactement comme un vrai produit → `--check` (T1) le croit vivant.
+- **Cause** : AliExpress ne renvoie pas 404 ; il sert une page « introuvable » en 200,
+  et la page produit *réelle* n'est visible qu'en **JS**.
+- **Correctif** : valider un lien produit avec **T2 (`--render`)**. La page morte a un
+  **titre vide** et le texte « *Désolé, la page que vous essayez d'atteindre n'a pu être
+  trouvée :(* » → ajouter `n'a pu être trouvée` / `could not be found` aux marqueurs soft-404.
+- **Mots-clés** : aliexpress, 200, soft-404, page introuvable, gatewayAdapt.
+
+## AliExpress : la liste de résultats est un JSON embarqué, pas un « article » (2026-09-27)
+- **Symptôme** : `trafilatura` (T1/T2) ne renvoie que le texte marketing de la page de
+  recherche, **aucun produit**.
+- **Cause** : trafilatura cible le contenu « article » et **jette la grille produits**
+  (JSON dans le HTML).
+- **Correctif** : parser le HTML brut (**curl_cffi suffit**) — `"productId":"…"`,
+  `"title":{"displayTitle":…}`, `"prices":{"salePrice":{"minPrice":…}}`, et le prix
+  mini 30 j dans `sellingPoints`.
+- **Mots-clés** : aliexpress, search, productId, displayTitle, trafilatura, listing.
