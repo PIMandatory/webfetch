@@ -48,18 +48,23 @@ Mini PC **8C/16T, 32 Go**, charge CPU/mémoire — **frais, silencieux, NPU ≥ 
 | Firebat A8 | AI 9 365 (RAM SODIMM extensible) | 32 Go + 1 To | 1 009 € (AliExpress) | AliExpress / Amazon.fr |
 | CHUWI AuBox X | Ultra 7 256V (Lunar Lake) | 16 Go | 762 € | AliExpress |
 
-## Bruit (décisif, via recherche)
+## Bruit — mesures croisées (décisif)
 
-- **GMKtec EVO-X1** : « point faible », **≈ 45 dB(A) en charge** (notebookcheck) → **écarté** pour « silencieux ».
-- **Firebat A8** : double ventilateur + 3 caloducs, « discret en usage courant » (pas de dB).
-- **Minisforum AI X1** : refroidissement annoncé « grand ventilateur silencieux », 65 W.
-- Beelink/ASUS/Geekom : **à confirmer** (pas encore de mesures croisées).
+| Modèle | Repos | Charge | Note |
+|---|---|---|---|
+| **Beelink SER9 MAX** | ~32 dB (Beelink) | continu, **sans pics** ; « quasi inaudible » | chambre à vapeur MSC 2.0 → **le plus silencieux** |
+| Minisforum AI X1 Pro | 28 dB | 38,4–41,8 dB (**mode Silence : 36,1 dB**) | correct, profil réglable au BIOS |
+| GMKtec EVO-X1 | 27,8–30,4 dB | **44,6–46,1 dB** | **bruyant** |
+| ASUS PN54 | 25 dB | **42,6–47,1 dB** | **bruyant** en charge |
 
-## Conclusion (provisoire)
+*(notebookcheck, 15 cm ; SER9 MAX qualitatif via minipc-review/Beelink.)*
 
-- **8C/16T strict + 32 Go + NPU** : **Beelink SER9 MAX (AI 7 H 350, 1 029 €)** — meilleur profil disponible.
-- **12C/24T silencieux à vérifier** : Minisforum AI X1 (1 139 €), GMKtec EVO-X1 (LDLC 1 200 €, mais **bruyant**).
-- Reste à **croiser le bruit** du SER9 MAX et confirmer prix/dispo FR + garantie.
+## Conclusion
+
+- **8C/16T strict + 32 Go + silencieux** : **Beelink SER9 MAX (AI 7 350, 1 029 €)** — meilleur profil, gagne sur le bruit.
+- **Plus de cœurs (12C/24T), silencieux en mode BIOS** : Minisforum AI X1 Pro (mode Silence 36 dB, 1 249 €).
+- **À éviter (bruit)** : GMKtec EVO-X1 (LDLC 1 200 €) et ASUS PN54 (~42–47 dB).
+- Reste à confirmer : **prix/dispo FR + garantie** du SER9 MAX.
 
 ## Reproduire
 

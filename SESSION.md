@@ -39,8 +39,9 @@ des achats — sans confondre un lien vivant avec un lien périmé.
   **soft-404** / **challenge** / archive) ; `--check --render` (validation de pages JS,
   ex. liens produit AliExpress) ; `--from-file` ; cache opt-in.
 - **Cas d'usage de référence = achat d'un mini PC** (recherche **multi-sources**, inclus dans ce
-  sujet) : `docs/use-cases/mini-pc-purchase.md`. Profil 8C/16T dispo : **Beelink SER9 MAX (AI 7 350, 32 Go, 1 029 €)** ;
-  Minisforum AI X1 1 139 €, GMKtec EVO-X1 LDLC 1 200 € (mais **bruyant**).
+  sujet) : `docs/use-cases/mini-pc-purchase.md`. **Retenu : Beelink SER9 MAX (AI 7 350, 8C/16T,
+  32 Go, 1 029 €, silencieux)** ; Minisforum AI X1 Pro (mode silence 36 dB, 1 249 €) ;
+  **à éviter** : GMKtec EVO-X1 / ASUS PN54 (~42–47 dB).
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
