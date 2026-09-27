@@ -52,9 +52,16 @@ uv run --with playwright playwright install --only-shell chromium
 ### Vérification (avant tout caractère définitif)
 ```sh
 PLAYWRIGHT_BROWSERS_PATH=$HOME/dev/webfetch/.browsers \
-  uv run --with playwright /path/to/webfetch --render <URL_SPA>
+  uv run --with playwright --script /path/to/webfetch --render <URL_SPA>
 ```
+> Le `--script` est **obligatoire** : le shebang PEP 723 du script empêche un
+> `uv run --with … <script>` simple de propager Playwright (voir `PITFALLS.md`).
 Comparer la sortie T1 (souvent vide/partielle) vs T2 (complète) → c'est le **test**.
+
+**Résultat 2026-09-27** : installé dans `.browsers/` (**266 Mo** extraits),
+T2 **validé** sur `quotes.toscrape.com/js/` (citations injectées en JS, invisibles
+en T1, restituées en T2). Arch non « officiellement supporté » → build de repli
+ubuntu24.04, fonctionnel.
 
 ### Contraintes / limites
 - Chrome for Testing ~187 Mo à chaque montée de version Playwright (nettoyage auto des
@@ -116,7 +123,7 @@ podman rm -f flaresolverr && podman rmi ghcr.io/flaresolverr/flaresolverr:latest
 
 | Date | Composant | Emplacement | Taille | Statut |
 |---|---|---|---|---|
-| — | *(rien à ce jour)* | — | — | — |
+| 2026-09-27 | Playwright `chromium-headless-shell` 153 + ffmpeg | `~/dev/webfetch/.browsers/` | 266 Mo | installé, **T2 validé** (page JS) ; retrait : `rm -rf ~/dev/webfetch/.browsers` |
 
 > Le cache `~/.cache/uv` (523 Mo) préexiste à ce sujet ; c'est un cache jetable,
 > pas une installation. Aucun paquet système, aucun `sudo` n'a été utilisé.

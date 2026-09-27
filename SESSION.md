@@ -9,7 +9,7 @@
 - Mode **`--check`** : statut, redirections, **soft-404**, **challenge anti-bot**, repli Wayback.
 - Lecteur hébergé gratuit `r.jina.ai` opérationnel (rend le JS, sans clé).
 - 4 paliers définis (T0 statique → T3 anti-bot → T4 API managées) ; T2 (Playwright) non testé.
-- État : code en place ; T2/T3 **planifiés et documentés**, **rien installé** (attente validation).
+- État : T1 + `--check` opérationnels ; **T2 installé (isolé) et validé** ; T3 à décider.
 
 ## Objectif
 Disposer d'une méthode fiable pour récupérer, extraire et **valider** le contenu
@@ -34,9 +34,12 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - Détection validée : Reddit sous-reddit inexistant = **200 « prove your humanity » → challenge** ;
   wikipedia/Shopify 404 → dead ; le monde/Shopfiy 404 OK.
 - Bloqués : g2.com (403) ; DDG-html (202).
+- **Install à ce jour** : Playwright `chromium-headless-shell` **266 Mo** dans
+  `~/dev/webfetch/.browsers/` (isolé, réversible) — T2 validé sur page JS. Registre : `docs/install-plan.md`.
+- **T2 validé** : `quotes.toscrape.com/js/` vide en T1 → restitué en T2. Invocation :
+  `uv run --with playwright --script webfetch --render URL` (+ `PLAYWRIGHT_BROWSERS_PATH`).
 - Env : Python 3.14.7, uv 0.12.19, Firefox (pas de Chromium) ; curl_cffi déjà installé.
-- **Install : RIEN à ce jour.** `podman` rootless présent, `docker` absent, toutes les
-  libs Chromium présentes, 722 Go libres. T2 = ~118 Mo (shell headless, isolé en `.browsers`).
+- `podman` rootless présent, `docker` absent, toutes les libs Chromium présentes, 722 Go libres.
 - Versions vérifiées (PyPI/npm/GitHub) : trafilatura 2.2.0, curl_cffi 0.16.3,
   playwright 1.63.0, scrapling 0.4.15, FlareSolverr 3.5.2, camoufox 0.5.6, firecrawl-py 4.44.0.
 
@@ -48,9 +51,9 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
 ## TODO
-- [ ] **Décider T2** : autoriser ou non l'install isolée (~118 Mo) + test sur une SPA.
+- [ ] **Cas de test** à fournir par l'utilisateur → mesurer T1 vs T2 dessus.
 - [ ] **Décider T3** : FlareSolverr via podman rootless (seulement si T2 insuffisant).
-- [ ] Choisir le corpus de test (1 URL par catégorie) et consigner les résultats.
+- [ ] Si T2 devient courant : intégrer `playwright` aux deps + `browsers_path` en config.
 - [ ] Décider d'un repli auto en `--check` (challenge → tentative T2/T3) ?
 - [ ] Ajouter une brique « recherche » (SearXNG local ou API) pour remplacer DDG-html.
 - [ ] Option `--archive` qui **récupère** le snapshot au lieu de seulement l'afficher.

@@ -40,3 +40,19 @@
 - **Correctif** : détecter une redirection en comparant l'**URL d'origine** et l'**URL finale**
   (en ignorant le `/` final), pas via `r.history`.
 - **Mots-clés** : curl_cffi, history, redirect, r.url.
+
+## `uv run --with X <script>` ignoré à cause du shebang PEP 723 (2026-09-27)
+- **Symptôme** : `uv run --with playwright webfetch --render` → « playwright not installed »,
+  alors que `uv run --with playwright python -c 'import playwright'` marche.
+- **Cause** : le script porte un shebang `uv run --script` ; le `--with` externe n'est pas
+  propagé à l'environnement PEP 723 du script.
+- **Correctif** : invoquer explicitement `uv run --with playwright --script webfetch --render URL`.
+- **Mots-clés** : uv, --with, --script, PEP 723, shebang, playwright.
+
+## Playwright : Arch non « officiellement supporté » (2026-09-27)
+- **Symptôme** : à l'install, « BEWARE: your OS is not officially supported by Playwright;
+  downloading fallback build for ubuntu24.04-x64 ».
+- **Cause** : Playwright ne cible pas Arch/CachyOS officiellement.
+- **Correctif** : le build de repli ubuntu24.04 **fonctionne** (libs système présentes) ;
+  le T2 a été validé sur une page JS. Ne pas s'inquiéter de l'avertissement.
+- **Mots-clés** : playwright, arch, unsupported, fallback, ubuntu24.04.
