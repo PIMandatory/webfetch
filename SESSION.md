@@ -50,6 +50,7 @@ des achats — sans confondre un lien vivant avec un lien périmé.
 ## Fichiers de référence
 - `~/.local/bin/webfetch` — le CLI (source : `dotfiles-cachyos/scripts/.local/bin/webfetch`).
 - `docs/tooling.md` — paysage des outils, paliers T0–T4, protocole, versions.
+- `docs/pipeline.md` — **état des briques** (testées/nécessaires) pour le cas d'usage réel.
 - `docs/install-plan.md` — prérequis, tailles, commandes isolées, retrait, registre installs.
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
