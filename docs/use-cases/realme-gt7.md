@@ -3,6 +3,9 @@
 > Fiche de recherche (2026-09-27). Outil : `webfetch` (recherche + validation).
 > Contexte : un **Realme GT7 12 Go** a été vu sur **AliExpress à 300 € en août** ; les prix ont
 > remonté depuis. Objectif : **retrouver un bon prix chez un revendeur sérieux**.
+>
+> ✅ **CLOS / ARCHIVÉ (2026-09-27)** — **promo trouvée sur AliExpress à ~370 €** : l'offre affichée
+> à **402 €** a bénéficié d'une **promo appliquée au panier**. Décision prise : commande à ce prix.
 
 ## Modèle à cibler (attention aux homonymes)
 | Nom | Puce | Remarque |

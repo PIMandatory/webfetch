@@ -12,8 +12,8 @@
 - Modes : extraction (markdown / texte / html / links / json), **`--check`** (+ **`--render`**),
   **`--search`** (+ `--engines`).
 - Paliers : T1 (`curl_cffi` + `trafilatura`), T2 (Playwright), recherche (**SearXNG** local).
-- **Cas d'usage inclus** : achat mini PC → `docs/use-cases/mini-pc-purchase.md` (clos) **+**
-  achat **Realme GT7** pour mon père → `docs/use-cases/realme-gt7.md` (en cours).
+- **Cas d'usage inclus** (tous deux **clos**) : mini PC → `docs/use-cases/mini-pc-purchase.md` ;
+  **Realme GT7** → `docs/use-cases/realme-gt7.md` (**promo AliExpress ~370 €**).
 - État : outil stable ; installs **isolées** (Playwright, SearXNG) ; docs à jour.
 
 ## Objectif
@@ -54,15 +54,13 @@ lien vivant avec un lien périmé.
 - `docs/pipeline.md` — **état des briques** (testées/nécessaires).
 - `docs/install-plan.md` — prérequis, tailles, commandes isolées, retrait, registre installs.
 - `docs/use-cases/mini-pc-purchase.md` — **cas d'usage** achat mini PC, multi-sources (clos).
-- `docs/use-cases/realme-gt7.md` — **cas d'usage** achat Realme GT7 (12 Go), en cours.
+- `docs/use-cases/realme-gt7.md` — **cas d'usage** achat Realme GT7 (12 Go), **clos/archivé**.
 - `examples/aliexpress_search.py` — exemple d'extraction d'un listing.
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
 - `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
 ## TODO
-- [ ] **Realme GT7** (en cours) : confirmer prix **Amazon.fr / Rue du Commerce / Cdiscount** ;
-  vérifier le **vendeur AliExpress** (EU vs Chine) ; surveiller une **promo**
-  (alertes/vérif. **automatisées = plus tard, à la demande**).
+- [x] **Realme GT7** : **clos/archivé** — promo **AliExpress ~370 €** (offre 402 € + **promo panier**).
 - [x] **mini PC** : **clos** — 32 Go ≤700 € sans douane **intenable** (pénurie DDR5). Reprendre si la RAM baisse.
 - [ ] **Décider** : formaliser l'adaptateur AliExpress (`--products`) dans `webfetch` ou garder en script.
 - [ ] **Décider T3** (FlareSolverr via podman) — seulement si un site l'exige.
