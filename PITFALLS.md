@@ -86,3 +86,14 @@
   **SearXNG auto-hébergé**. Sans cette brique, impossible de croiser les specs avec des
   tests/avis (bloque notamment l'évaluation « bruit/silence »).
 - **Mots-clés** : search, serp, duckduckgo, bing, brave, captcha, 202.
+
+## HTTP 200 ≠ produit achetable (2026-09-27)
+- **Symptôme** : `webfetch --check` renvoie `OK` sur une fiche produit, mais le produit est
+  **indisponible / en rupture**, ou la config par défaut **n'est pas** celle voulue (ex.
+  16 Go au lieu de 32 Go), ou la référence a changé.
+- **Cause** : le statut HTTP valide **la page**, pas la **disponibilité produit** ni la config ;
+  les **URLs produit sont volatiles** (refs changées, stock écoulé, variantes).
+- **Correctif** : vérifier le **contenu** (chercher `indisponible` / `rupture` / `out of stock`,
+  et les **variantes/prix**) ; **privilégier des pages de recherche/catégorie stables** ;
+  **ne jamais livrer une URL produit** sans vérifier stock + config au moment de l'envoyer.
+- **Mots-clés** : disponibilité, rupture, stock, fiche produit, variantes, liens morts.
