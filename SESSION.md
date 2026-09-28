@@ -1,6 +1,6 @@
 # Session — Récupération web / scraping (webfetch)
 
-> Dernière mise à jour : 2026-09-27.
+> Dernière mise à jour : 2026-09-28.
 >
 > **Projet** (git + remote GitHub `PIMandatory/webfetch`). Le CLI est un **outil durable** ;
 > **SearXNG est géré automatiquement en one-shot** (démarré/arrêté par `webfetch --search`, arrêté hors usage).
@@ -33,7 +33,7 @@ lien vivant avec un lien périmé.
 - 2026-09-27 : seuil réaliste — en **marque connue + UE + 32 Go**, plancher ≈ **800 €**.
 
 ## État / données clés (2026-09-27)
-- **CLI** : `~/.local/bin/webfetch` (source `dotfiles-cachyos/scripts/`), `--version` = `2.0.0`.
+- **CLI** : `~/.local/bin/webfetch` (source `~/dev/dotfiles-cachyos/scripts/`), `--version` = `2.0.0`.
 - **Invocations** : T2 = `uv run --with playwright --script webfetch --render URL`
   (+ `PLAYWRIGHT_BROWSERS_PATH`) ; recherche = `webfetch --search "…" [--engines google,bing]`
   (**one-shot** : démarre/arrête SearXNG ; `--no-autostart` pour gérer à la main).
@@ -48,7 +48,7 @@ lien vivant avec un lien périmé.
 - Versions outils (vérif. 2026-09-27) : table dans `docs/tooling.md`.
 
 ## Fichiers de référence
-- `~/.local/bin/webfetch` — le CLI (source : `dotfiles-cachyos/scripts/.local/bin/webfetch`).
+- `~/.local/bin/webfetch` — le CLI (source : `~/dev/dotfiles-cachyos/scripts/.local/bin/webfetch`).
 - `CHANGELOG.md` — histoire du sujet/outil.
 - `docs/tooling.md` — paysage des outils, paliers T0–T4, protocole, versions.
 - `docs/pipeline.md` — **état des briques** (testées/nécessaires).
@@ -57,7 +57,7 @@ lien vivant avec un lien périmé.
 - `docs/use-cases/realme-gt7.md` — **cas d'usage** achat Realme GT7 (12 Go), **clos/archivé**.
 - `examples/aliexpress_search.py` — exemple d'extraction d'un listing.
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
-- `dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
+- `~/dev/dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
 
 ## TODO
 - [x] **Realme GT7** : **clos/archivé** — promo **AliExpress ~370 €** (offre 402 € + **promo panier**).
