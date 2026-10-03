@@ -1,6 +1,6 @@
 # Session — Récupération web / scraping (webfetch)
 
-> Dernière mise à jour : 2026-09-28.
+> Dernière mise à jour : 2026-10-03.
 >
 > **Projet** (git + remote GitHub `PIMandatory/webfetch`). Le CLI est un **outil durable** ;
 > **SearXNG est géré automatiquement en one-shot** (démarré/arrêté par `webfetch --search`, arrêté hors usage).
@@ -12,8 +12,9 @@
 - Modes : extraction (markdown / texte / html / links / json), **`--check`** (+ **`--render`**),
   **`--search`** (+ `--engines`).
 - Paliers : T1 (`curl_cffi` + `trafilatura`), T2 (Playwright), recherche (**SearXNG** local).
-- **Cas d'usage inclus** (tous deux **clos**) : mini PC → `docs/use-cases/mini-pc-purchase.md` ;
-  **Realme GT7** → `docs/use-cases/realme-gt7.md` (**promo AliExpress ~370 €**).
+- **Cas d'usage inclus** (tous **clos**) : mini PC → `docs/use-cases/mini-pc-purchase.md` ;
+  **Realme GT7** → `docs/use-cases/realme-gt7.md` (**promo AliExpress ~370 €**) ;
+  **clavier + souris Windows** → `docs/use-cases/keyboard-mouse-windows.md` (achat fait, **sans `webfetch`**).
 - État : outil stable ; installs **isolées** (Playwright, SearXNG) ; docs à jour.
 
 ## Objectif
@@ -43,6 +44,8 @@ lien vivant avec un lien périmé.
   plus longtemps) → `--engines` pour router autour d'un moteur bloqué.
 - **Cas mini PC** : **clos** — 32 Go ≤700 € sans douane = **intenable** (pénurie DDR5).
   Détails, candidats écartés et verdicts marques : `docs/use-cases/mini-pc-purchase.md`.
+- **Cas clavier/souris Windows** : **clos** — achat effectué, recherche arrêtée **avant** toute
+  campagne de prix ; chiffres de mémoire, **non sourcés** : `docs/use-cases/keyboard-mouse-windows.md`.
 - Bloqués : g2.com (403) ; DDG-html (202) ; Darty/Amazon (403/captcha).
 - Env : Python 3.14.7, uv 0.12.19, podman rootless (docker absent), 722 Go libres.
 - Versions outils (vérif. 2026-09-27) : table dans `docs/tooling.md`.
@@ -55,6 +58,7 @@ lien vivant avec un lien périmé.
 - `docs/install-plan.md` — prérequis, tailles, commandes isolées, retrait, registre installs.
 - `docs/use-cases/mini-pc-purchase.md` — **cas d'usage** achat mini PC, multi-sources (clos).
 - `docs/use-cases/realme-gt7.md` — **cas d'usage** achat Realme GT7 (12 Go), **clos/archivé**.
+- `docs/use-cases/keyboard-mouse-windows.md` — **cas d'usage** clavier + souris sans fil (poste Windows), **clos/archivé**.
 - `examples/aliexpress_search.py` — exemple d'extraction d'un listing.
 - `PITFALLS.md` — pièges de scraping déjà rencontrés.
 - `~/dev/dotfiles-cachyos/scripts/README.md` — usage du CLI (section « webfetch »).
@@ -62,6 +66,8 @@ lien vivant avec un lien périmé.
 ## TODO
 - [x] **Realme GT7** : **clos/archivé** — promo **AliExpress ~370 €** (offre 402 € + **promo panier**).
 - [x] **mini PC** : **clos** — 32 Go ≤700 € sans douane **intenable** (pénurie DDR5). Reprendre si la RAM baisse.
+- [x] **clavier/souris Windows** : **clos/archivé** — achat fait avant la campagne de prix (fiche non sourcée).
+- [ ] **clavier/souris** : si reprise, compléter la fiche (modèle acheté, AZERTY, prix/poids réels).
 - [ ] **Décider** : formaliser l'adaptateur AliExpress (`--products`) dans `webfetch` ou garder en script.
 - [ ] **Décider T3** (FlareSolverr via podman) — seulement si un site l'exige.
 - [ ] `--archive` : **récupérer** le snapshot, pas seulement l'afficher.

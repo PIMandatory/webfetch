@@ -4,6 +4,15 @@
 > **Versioning policy (since 2026-09-27)**: the **git tag = the tool version** (`webfetch --version`).
 > Tags `v0.1–v1.9` are kept as **historical study milestones**.
 
+## [docs] — 2026-10-03
+
+- **Third product-research use case**: `docs/use-cases/keyboard-mouse-windows.md` —
+  keyboard + wireless mouse for a third-party **Windows** workstation (office/graphics/video,
+  90-130 € budget); **closed**, purchase made by the buyer.
+- **Method note**: this one was **decided from model knowledge only, without running
+  `webfetch`** — its figures are documented reasoning, **not sourced price data**.
+  New `PITFALLS.md` entry: *unverified product recommendation*.
+
 ## [2.0.0] — 2026-09-27
 
 - **Versioning aligned**: git tag = tool version from now on; reset to `2.0.0` (above the

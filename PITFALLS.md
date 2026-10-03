@@ -1,7 +1,7 @@
 # PITFALLS — webfetch / scraping
 
 > Registre *symptôme → cause → correctif*. Lu en reprise, mis à jour en fin de session.
-> Dernière mise à jour : 2026-09-27.
+> Dernière mise à jour : 2026-10-03.
 
 ## trafilatura CLI ignore `-i <file>` (2026-09-27)
 - **Symptôme** : `trafilatura -i /tmp/x.html` produit une sortie vide (code 1).
@@ -105,3 +105,15 @@
 - **Correctif** : `--engines google,bing` (route autour du moteur bloqué, cf. option ajoutée) ;
   attendre **~3 min de calme** ; ne pas requêter en rafale.
 - **Mots-clés** : searxng, suspended_time, 180, rate limit, captcha, --engines.
+
+## Recommandation produit donnée « de mémoire », non sourcée (2026-10-03)
+- **Symptôme** : une fiche de recherche produit est close, ou un achat est déclenché, sur des
+  **prix / poids / specs issus de la mémoire du modèle**, sans aucun passage par `webfetch`.
+- **Cause** : la conversation dérive vers le conseil/la comparaison (réponse « de base de
+  connaissances » légitime), puis l'achat est décidé avant que la campagne de vérification
+  ne démarre → la recherche se termine sans source.
+- **Correctif** : dès qu'une fourchette de prix ou une spec devient **décisionnelle**, la
+  **marquer comme non vérifiée** et la sourcer (`webfetch --search`, `--check --render`) ; sinon
+  la fiche doit porter un bandeau explicite « chiffres non sourcés » (cf.
+  `docs/use-cases/keyboard-mouse-windows.md`).
+- **Mots-clés** : prix indicatif, non vérifié, mémoire, fiche produit, décision d'achat.
