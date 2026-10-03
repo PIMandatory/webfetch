@@ -4,9 +4,9 @@
 > Contexte : équiper un **poste Windows tiers** (pas le mien) pour du **bureautique +
 > graphisme/vidéo**, sessions de **4-6 h**, **sans jeu vidéo**. Budget **cumulé 90-130 €**.
 >
-> ✅ **CLOS / ARCHIVÉ (2026-10-03)** — **achat effectué** par l'acquéreur ; recherche
-> arrêtée **avant** toute campagne `webfetch`. ⚠️ Tous les chiffres ci-dessous viennent de
-> ma **base de connaissances** : **prix, poids et D.P.I. indicatifs, NON vérifiés à la source**.
+> 🟡 **EN COURS (2026-10-03) — NON clos.** Recherche **ouverte** ; **aucune** campagne
+> `webfetch` n'a encore tourné. ⚠️ Tous les chiffres ci-dessous viennent de ma **base de
+> connaissances** : **prix, poids et D.P.I. indicatifs, NON vérifiés à la source**.
 
 ## Besoin et contraintes
 
@@ -87,7 +87,7 @@ Deux réserves importantes vis-à-vis du critère « bonnes sensations » de l'a
 - Rappel : des **patins PTFE** en bon état et un **centre de gravité vers l'arrière**
   comptent autant que la masse dans la sensation de tenue.
 
-## Recommandation finale (recherche arrêtée ici)
+## Recommandation provisoire (recherche ouverte)
 
 | | Piste budget ~90-105 € | Piste qualité ~110-130 € |
 |---|---|---|
@@ -98,8 +98,10 @@ Deux réserves importantes vis-à-vis du critère « bonnes sensations » de l'a
 Écartés d'office : 60 %/TKL (pas de pavé numérique ni de rangée F pour la vidéo), claviers
 gaming, Keychron séries Q/V (enthusiast, AZERTY FR rare), verticale (déjà testée).
 
-## Ce qui n'a PAS été vérifié (à faire si reprise)
+## Ce qui n'a PAS été vérifié (à faire — recherche ouverte)
 
+- [ ] **Statut réel de l'achat** : annoncé « achat fait et recherche terminée » puis
+      **« non clos »** → contradiction à trancher avant tout archivage.
 - [ ] **Modèle réellement acheté** (non communiqué) → compléter la fiche.
 - [ ] **Disposition AZERTY FR** du clavier — jamais confirmée.
 - [ ] **Prix réels / disponibilité** de la M650 L, M720, MX Keys S, K650, KC 6000 Slim.
@@ -116,7 +118,7 @@ webfetch --check --render "https://www.logitech.com/fr-fr/products/mice/m650-sig
 
 ## Note de méthode (leçon)
 
-Ce cas d'usage s'est **clos sans `webfetch`** : la recherche a été arrêtée par l'achat de
-l'acquéreur avant la campagne de prix. Conséquence assumée : la fiche est un **raisonnement
-documenté**, pas un **relevé sourcé**. Ne pas réutiliser ses prix comme des prix constatés
-(voir `PITFALLS.md`, entrée « Recommandation produit non vérifiée »).
+Ce cas d'usage s'est déroulé **sans `webfetch`** : les prix et specs ont été donnés de
+mémoire, et la recherche **n'est pas close**. Conséquence assumée : la fiche est un
+**raisonnement documenté**, pas un **relevé sourcé**. Ne pas réutiliser ses prix comme des
+prix constatés (voir `PITFALLS.md`, entrée « Recommandation produit non vérifiée »).

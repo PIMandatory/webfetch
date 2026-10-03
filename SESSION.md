@@ -12,9 +12,9 @@
 - Modes : extraction (markdown / texte / html / links / json), **`--check`** (+ **`--render`**),
   **`--search`** (+ `--engines`).
 - Paliers : T1 (`curl_cffi` + `trafilatura`), T2 (Playwright), recherche (**SearXNG** local).
-- **Cas d'usage inclus** (tous **clos**) : mini PC → `docs/use-cases/mini-pc-purchase.md` ;
+- **Cas d'usage inclus** (deux **clos**, un **en cours**) : mini PC → `docs/use-cases/mini-pc-purchase.md` ;
   **Realme GT7** → `docs/use-cases/realme-gt7.md` (**promo AliExpress ~370 €**) ;
-  **clavier + souris Windows** → `docs/use-cases/keyboard-mouse-windows.md` (achat fait, **sans `webfetch`**).
+  **clavier + souris Windows** → `docs/use-cases/keyboard-mouse-windows.md` (**en cours**, sans `webfetch`).
 - État : outil stable ; installs **isolées** (Playwright, SearXNG) ; docs à jour.
 
 ## Objectif
@@ -44,8 +44,8 @@ lien vivant avec un lien périmé.
   plus longtemps) → `--engines` pour router autour d'un moteur bloqué.
 - **Cas mini PC** : **clos** — 32 Go ≤700 € sans douane = **intenable** (pénurie DDR5).
   Détails, candidats écartés et verdicts marques : `docs/use-cases/mini-pc-purchase.md`.
-- **Cas clavier/souris Windows** : **clos** — achat effectué, recherche arrêtée **avant** toute
-  campagne de prix ; chiffres de mémoire, **non sourcés** : `docs/use-cases/keyboard-mouse-windows.md`.
+- **Cas clavier/souris Windows** : **en cours / NON clos** — aucune campagne de prix lancée ;
+  chiffres de mémoire, **non sourcés** : `docs/use-cases/keyboard-mouse-windows.md`.
 - Bloqués : g2.com (403) ; DDG-html (202) ; Darty/Amazon (403/captcha).
 - Env : Python 3.14.7, uv 0.12.19, podman rootless (docker absent), 722 Go libres.
 - Versions outils (vérif. 2026-09-27) : table dans `docs/tooling.md`.
@@ -66,8 +66,10 @@ lien vivant avec un lien périmé.
 ## TODO
 - [x] **Realme GT7** : **clos/archivé** — promo **AliExpress ~370 €** (offre 402 € + **promo panier**).
 - [x] **mini PC** : **clos** — 32 Go ≤700 € sans douane **intenable** (pénurie DDR5). Reprendre si la RAM baisse.
-- [x] **clavier/souris Windows** : **clos/archivé** — achat fait avant la campagne de prix (fiche non sourcée).
-- [ ] **clavier/souris** : si reprise, compléter la fiche (modèle acheté, AZERTY, prix/poids réels).
+- [x] **clavier/souris Windows** : fiche ouverte — clavier « orienté travail » arbitré,
+      souris **M650 L** retenue (à confirmer).
+- [ ] **clavier/souris Windows (suite)** : **campagne de prix `webfetch`** à lancer ; statut
+      d'achat à clarifier (« achat fait » puis « non clos »).
 - [ ] **Décider** : formaliser l'adaptateur AliExpress (`--products`) dans `webfetch` ou garder en script.
 - [ ] **Décider T3** (FlareSolverr via podman) — seulement si un site l'exige.
 - [ ] `--archive` : **récupérer** le snapshot, pas seulement l'afficher.

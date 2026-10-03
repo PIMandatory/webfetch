@@ -8,7 +8,7 @@
 
 - **Third product-research use case**: `docs/use-cases/keyboard-mouse-windows.md` —
   keyboard + wireless mouse for a third-party **Windows** workstation (office/graphics/video,
-  90-130 € budget); **closed**, purchase made by the buyer.
+  90-130 € budget); **open / not closed**, no `webfetch` campaign run yet.
 - **Method note**: this one was **decided from model knowledge only, without running
   `webfetch`** — its figures are documented reasoning, **not sourced price data**.
   New `PITFALLS.md` entry: *unverified product recommendation*.
